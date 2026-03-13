@@ -21,7 +21,7 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#00A651] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F7FAFC] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <button className="bg-white text-[#0077C8] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F7FAFC] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               Book Appointment
             </button>
             <a 

@@ -150,7 +150,7 @@ export default function Navbar() {
               <span className="hidden sm:inline">Customer Care - 8 AM to 11:30 PM</span>
               <a 
                 href="tel:9270216369" 
-                className="flex items-center gap-2 text-[#00A651] font-semibold hover:text-[#0077C8] transition-colors"
+                className="flex items-center gap-2 text-[#0077C8] font-semibold hover:text-[#00A651] transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 92702 16369
@@ -232,7 +232,7 @@ export default function Navbar() {
                         <Link
                           key={location.name}
                           href={location.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm text-[#0B0F19] hover:bg-[#00A651]/10 hover:text-[#00A651] transition-colors"
+                          className="flex items-center gap-2 px-4 py-2 text-sm text-[#0B0F19] hover:bg-[#0077C8]/10 hover:text-[#0077C8] transition-colors"
                         >
                           <MapPin className="w-4 h-4" />
                           {location.name}
@@ -247,7 +247,7 @@ export default function Navbar() {
             {/* Right Section - Book Button */}
             <div className="hidden lg:flex items-center">
               {/* Book Appointment Button */}
-              <button className="flex items-center gap-2 bg-[#00A651] text-white px-7 py-3 rounded-full font-semibold hover:bg-green-700 transition-all duration-300 shadow-md hover:shadow-lg">
+              <button className="flex items-center gap-2 bg-[#0077C8] text-white px-7 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
                 <Calendar className="w-4 h-4" />
                 Book Appointment
               </button>
@@ -347,7 +347,7 @@ export default function Navbar() {
                   ))}
 
                   {/* Mobile Book Appointment Button */}
-                  <button className="flex items-center justify-center gap-2 w-full bg-[#00A651] text-white px-7 py-3 rounded-full font-semibold mt-6 shadow-md hover:bg-green-700 transition-all duration-300">
+                  <button className="flex items-center justify-center gap-2 w-full bg-[#0077C8] text-white px-7 py-3 rounded-full font-semibold mt-6 shadow-md hover:bg-blue-700 transition-all duration-300">
                     <Calendar className="w-5 h-5" />
                     Book Appointment
                   </button>
@@ -359,7 +359,7 @@ export default function Navbar() {
       </nav>
 
       {/* Floating Book Appointment Button */}
-      <button className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#00A651] text-white px-6 py-4 rounded-full font-semibold shadow-2xl hover:bg-green-700 transition-all duration-300 hover:scale-105">
+      <button className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#0077C8] text-white px-6 py-4 rounded-full font-semibold shadow-2xl hover:bg-blue-700 transition-all duration-300 hover:scale-105">
         <Calendar className="w-5 h-5" />
         <span className="hidden sm:inline">Book Free Consultation</span>
         <span className="sm:hidden">Book Now</span>

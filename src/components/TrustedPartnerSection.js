@@ -88,7 +88,7 @@ export default function TrustedPartnerSection() {
                 
                 {/* Active Indicator */}
                 {activeIndex === index && (
-                  <div className="absolute top-4 right-4 w-3 h-3 bg-[#00A651] rounded-full animate-pulse" />
+                  <div className="absolute top-4 right-4 w-3 h-3 bg-[#0077C8] rounded-full animate-pulse" />
                 )}
               </div>
               
@@ -124,7 +124,7 @@ export default function TrustedPartnerSection() {
             {/* Content Side */}
             <div className="p-12 flex flex-col justify-center">
               <div className="mb-6">
-                <span className="inline-block px-4 py-2 bg-[#00A651]/10 text-[#00A651] rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block px-4 py-2 bg-[#0077C8]/10 text-[#0077C8] rounded-full text-sm font-semibold mb-4">
                   Why Choose Us
                 </span>
                 <h3 className="text-3xl font-bold text-[#0B0F19] mb-4">
@@ -143,7 +143,7 @@ export default function TrustedPartnerSection() {
                     onClick={() => setActiveIndex(index)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       activeIndex === index 
-                        ? "w-8 bg-[#00A651]" 
+                        ? "w-8 bg-[#0077C8]" 
                         : "w-2 bg-gray-300 hover:bg-gray-400"
                     }`}
                   />
@@ -151,7 +151,7 @@ export default function TrustedPartnerSection() {
               </div>
               
               {/* CTA Button */}
-              <button className="inline-flex items-center gap-2 bg-[#00A651] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#0077C8] transition-all duration-300 shadow-lg hover:shadow-xl">
+              <button className="inline-flex items-center gap-2 bg-[#0077C8] text-white px-8 py-4 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Learn More
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

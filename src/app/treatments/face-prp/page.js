@@ -11,7 +11,7 @@ export default function FacePRPPage() {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Face PRP</h1>
             <p className="text-lg text-gray-600 mb-8">Harness your body&apos;s natural healing power for facial rejuvenation and radiant skin</p>
-            <button className="px-8 py-4 bg-[#00A651] text-white rounded-full font-semibold hover:bg-[#0077C8] transition-all duration-300">Book Consultation</button>
+            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
           </div>
         </div>
       </section>
@@ -70,7 +70,7 @@ export default function FacePRPPage() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Rejuvenate Naturally</h2>
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your Face PRP treatment today</p>
-          <button className="px-8 py-4 bg-white text-[#00A651] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
+          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
         </div>
       </section>
     </main>

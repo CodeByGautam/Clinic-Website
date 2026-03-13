@@ -113,7 +113,7 @@ export default function Testimonials() {
                           <p className="text-gray-500 text-sm">{testimonial.city}</p>
                         </div>
                       </div>
-                      <span className="px-4 py-2 bg-[#00A651]/10 text-[#00A651] rounded-full text-sm font-semibold">
+                      <span className="px-4 py-2 bg-[#0077C8]/10 text-[#0077C8] rounded-full text-sm font-semibold">
                         {testimonial.treatment}
                       </span>
                     </div>
@@ -126,7 +126,7 @@ export default function Testimonials() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#0B0F19] hover:bg-[#00A651] hover:text-white transition-colors"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#0B0F19] hover:bg-[#0077C8] hover:text-white transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -134,7 +134,7 @@ export default function Testimonials() {
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#0B0F19] hover:bg-[#00A651] hover:text-white transition-colors"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-[#0B0F19] hover:bg-[#0077C8] hover:text-white transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -148,7 +148,7 @@ export default function Testimonials() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentIndex ? "bg-[#00A651]" : "bg-gray-300"
+                  index === currentIndex ? "bg-[#0077C8]" : "bg-gray-300"
                 }`}
               />
             ))}

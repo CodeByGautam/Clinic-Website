@@ -76,7 +76,7 @@ export default function BeforeAfterSlider() {
               
               {/* After Image (Right side with clip) */}
               <div 
-                className="absolute inset-0 flex items-center justify-center bg-[#00A651]/10 transition-opacity duration-500"
+                className="absolute inset-0 flex items-center justify-center bg-[#0077C8]/10 transition-opacity duration-500"
                 style={{ clipPath: `inset(0 ${100 - sliderValue}% 0 0)` }}
               >
                 <div className="text-center">
@@ -133,7 +133,7 @@ export default function BeforeAfterSlider() {
                   onClick={() => setActiveIndex(index)}
                   className={`w-full text-left p-6 rounded-xl transition-all duration-300 ${
                     activeIndex === index
-                      ? "bg-[#00A651] text-white shadow-lg"
+                      ? "bg-[#0077C8] text-white shadow-lg"
                       : "bg-[#F7FAFC] text-[#0B0F19] hover:shadow-md"
                   }`}
                 >

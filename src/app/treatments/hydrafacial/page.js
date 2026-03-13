@@ -16,7 +16,7 @@ export default function HydrafacialPage() {
             <p className="text-lg text-gray-600 mb-8">
               Deep cleanse, exfoliate, and hydrate your skin with our advanced Hydrafacial technology for an instant glow
             </p>
-            <button className="px-8 py-4 bg-[#00A651] text-white rounded-full font-semibold hover:bg-[#0077C8] transition-all duration-300">
+            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">
               Book Consultation
             </button>
           </div>
@@ -167,7 +167,7 @@ export default function HydrafacialPage() {
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Book your Hydrafacial treatment today and experience the transformation
           </p>
-          <button className="px-8 py-4 bg-white text-[#00A651] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
+          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
             Book Your Appointment
           </button>
         </div>
