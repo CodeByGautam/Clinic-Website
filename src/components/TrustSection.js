@@ -66,7 +66,7 @@ export default function TrustSection() {
           {trustItems.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-3 text-[#0B0F19] hover:text-[#00A651] transition-colors"
+              className="flex items-center gap-3 text-[#0B0F19] hover:text-[#0077C8] transition-colors"
             >
               <div className="text-[#00A651]">{item.icon}</div>
               <div>

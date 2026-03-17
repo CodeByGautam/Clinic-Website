@@ -1,88 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Skin Resurfacing Treatment | Healthfusion Multispeciality Clinic",
   description: "Advanced skin resurfacing treatments at Healthfusion Multispeciality Clinic. Improve skin texture, reduce scars, and rejuvenate your skin.",
 };
 
 export default function SkinResurfacingPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">
-              Skin Resurfacing Treatment
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Transform your skin texture with our advanced resurfacing treatments. 
-              Smooth scars, reduce pores, and reveal fresh, youthful skin.
-            </p>
-            <button className="px-8 py-4 bg-[#00A651] text-white rounded-full font-semibold hover:bg-[#0077C8] transition-all duration-300">
-              Book Consultation
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">
-                Renew Your Skin Surface
-              </h2>
-              <p className="text-gray-600 mb-4">
-                Skin resurfacing treatments remove damaged outer layers of skin 
-                to reveal smoother, healthier skin underneath. Ideal for treating 
-                acne scars, fine lines, sun damage, and uneven texture.
-              </p>
-              <p className="text-gray-600">
-                Our dermatologists use state-of-the-art laser and energy-based 
-                devices to deliver precise, effective results with minimal downtime.
-              </p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Options */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Our Resurfacing Solutions
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Fractional Laser",
-                description: "Target deep scars and wrinkles with precision fractional laser technology.",
-              },
-              {
-                title: "CO2 Laser",
-                description: "Comprehensive skin renewal for significant texture improvement.",
-              },
-              {
-                title: "Microneedling",
-                description: "Stimulate collagen production naturally for smoother skin texture.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Skin Resurfacing Treatment"
+      description="Premium resurfacing protocols designed to refine texture, smooth acne scars, reduce visible pores, and reveal a fresher-looking complexion—planned safely for your skin type."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Skin Resurfacing",
+        description:
+          "Skin resurfacing focuses on improving texture by encouraging controlled renewal of the skin surface. It is commonly used for acne scars, enlarged pores, fine lines, sun damage, and uneven texture.\n\nTreatment choice depends on skin type, downtime preference, scar depth, and sensitivity.",
+        image:
+          "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns / Symptoms"
+      causes={[
+        { title: "Acne scars" },
+        { title: "Uneven texture" },
+        { title: "Large pores" },
+        { title: "Fine lines" },
+        { title: "Sun damage" },
+        { title: "Dull skin" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Fractional Laser",
+          description: "Supports scar and texture improvement with controlled resurfacing.",
+        },
+        {
+          title: "CO2 Laser (as advised)",
+          description: "For deeper resurfacing needs with planned downtime.",
+        },
+        {
+          title: "Microneedling / MNRF (as advised)",
+          description: "Collagen support for scars and pores.",
+        },
+        {
+          title: "Combination Planning",
+          description: "May combine laser + peels/topicals for better outcomes.",
+        },
+        {
+          title: "Soothing Aftercare",
+          description: "Barrier repair guidance for safe healing.",
+        },
+        {
+          title: "Maintenance Strategy",
+          description: "Long-term plan for texture and glow.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Smoother texture" },
+        { title: "Refined appearance of scars" },
+        { title: "Reduced appearance of pores" },
+        { title: "Brighter, fresher look" },
+        { title: "Improved skincare absorption" },
+        { title: "Customized downtime options" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Assessment",
+          description: "We evaluate scar depth, texture, and skin type.",
+        },
+        {
+          title: "Preparation",
+          description: "Cleansing and numbing where needed.",
+        },
+        {
+          title: "Resurfacing Session",
+          description: "Laser/microneedling performed with safe parameters.",
+        },
+        {
+          title: "Aftercare",
+          description: "Soothing routine + strict sun protection guidance.",
+        },
+        {
+          title: "Follow-up",
+          description: "We monitor healing and plan next sessions.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Skin-type aware protocols",
+          description: "Planned to reduce irritation and PIH risk.",
+        },
+        {
+          title: "Premium devices & care",
+          description: "Modern technology with professional standards.",
+        },
+        {
+          title: "Natural results focus",
+          description: "Gradual improvement with safe healing.",
+        },
+        {
+          title: "Aftercare guidance",
+          description: "Barrier support to protect results.",
+        },
+        {
+          title: "Combination expertise",
+          description: "When needed, we plan complementary therapies.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is resurfacing safe for sensitive skin?",
+          answer:
+            "Suitability depends on your skin type and concern. We plan the safest option after assessment.",
+        },
+        {
+          question: "How many sessions do I need?",
+          answer:
+            "It depends on scar depth and goals. Many plans involve multiple sessions.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Downtime varies by technique. We’ll recommend an option that fits your schedule.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Some glow can appear early, while scar and texture improvements build over time.",
+        },
+        {
+          question: "Do I need sunscreen after resurfacing?",
+          answer:
+            "Yes—strict sun protection is essential to protect healing skin and maintain results.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

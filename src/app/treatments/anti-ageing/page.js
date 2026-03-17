@@ -1,88 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Anti-Ageing Treatment | Healthfusion Multispeciality Clinic",
   description: "Advanced anti-ageing treatments at Healthfusion Multispeciality Clinic. Reduce wrinkles, fine lines, and restore youthful skin.",
 };
 
 export default function AntiAgeingPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">
-              Anti-Ageing Treatment
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Turn back the clock with our advanced anti-ageing treatments. 
-              Rejuvenate your skin and restore your youthful glow.
-            </p>
-            <button className="px-8 py-4 bg-[#00A651] text-white rounded-full font-semibold hover:bg-[#0077C8] transition-all duration-300">
-              Book Consultation
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">
-                Reverse Signs of Ageing
-              </h2>
-              <p className="text-gray-600 mb-4">
-                As we age, our skin loses collagen and elasticity, leading to 
-                wrinkles, fine lines, and sagging. Our anti-ageing treatments 
-                are designed to stimulate collagen production and restore skin vitality.
-              </p>
-              <p className="text-gray-600">
-                We combine cutting-edge technology with proven techniques to deliver 
-                natural-looking, long-lasting results.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Options */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Our Anti-Ageing Solutions
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Botox & Fillers",
-                description: "Smooth wrinkles and restore volume with our expert injectable treatments.",
-              },
-              {
-                title: "Laser Resurfacing",
-                description: "Stimulate collagen and improve skin texture with advanced laser technology.",
-              },
-              {
-                title: "PRP Therapy",
-                description: "Harness your body's natural healing power for skin rejuvenation.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Anti-Ageing Treatment"
+      description="Premium dermatologist-led rejuvenation protocols to reduce fine lines, improve firmness, and restore a naturally youthful glow."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Skin Ageing",
+        description:
+          "Ageing is a natural process, but factors like sun exposure, stress, pollution, and lifestyle can accelerate it. Common signs include fine lines, wrinkles, dullness, uneven tone, and loss of elasticity.\n\nOur anti-ageing plans are built around collagen stimulation, skin barrier support, and targeted procedures for visible yet natural-looking results.",
+        image:
+          "https://images.unsplash.com/photo-1580281657527-47f249e8f7fd?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Causes / Symptoms"
+      causes={[
+        { title: "Sun exposure (photo-ageing)" },
+        { title: "Collagen & elastin loss" },
+        { title: "Dehydration & barrier damage" },
+        { title: "Oxidative stress & pollution" },
+        { title: "Poor sleep & high stress" },
+        { title: "Hormonal changes" },
+      ]}
+      optionsTitle="Anti-Ageing Treatment Options"
+      options={[
+        {
+          title: "Skin Tightening & Rejuvenation",
+          description: "Non-surgical options to improve firmness and texture.",
+        },
+        {
+          title: "Dermatologist Facials",
+          description: "Hydration, glow, and barrier recovery with medical-grade actives.",
+        },
+        {
+          title: "PRP / Growth Factor Support",
+          description: "Stimulates healing response to improve skin quality over time.",
+        },
+        {
+          title: "Injectables (as advised)",
+          description: "For fine lines/volume restoration when clinically indicated.",
+        },
+        {
+          title: "Laser / Resurfacing",
+          description: "For tone, texture, pores, and collagen remodeling.",
+        },
+        {
+          title: "Dermatologist Skincare Plan",
+          description: "A consistent home routine to maintain clinic results.",
+        },
+      ]}
+      benefitsTitle="Benefits of Anti-Ageing Treatment"
+      benefits={[
+        { title: "Reduced fine lines & wrinkles" },
+        { title: "Improved firmness & elasticity" },
+        { title: "Brighter, more even skin tone" },
+        { title: "Refined pores and smoother texture" },
+        { title: "Healthy hydration and glow" },
+        { title: "Natural-looking rejuvenation" },
+      ]}
+      procedureTitle="Your Treatment Journey"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We map concerns, lifestyle, and desired outcomes.",
+        },
+        {
+          title: "Skin Analysis",
+          description: "Assessment of tone, texture, elasticity, and hydration.",
+        },
+        {
+          title: "Plan Design",
+          description: "We decide procedures + intervals + home care routine.",
+        },
+        {
+          title: "Sessions",
+          description: "Treatments performed with safe protocols and comfort focus.",
+        },
+        {
+          title: "Maintenance",
+          description: "Long-term plan for sustained results and skin health.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Doctor-led planning",
+          description: "Treatments selected based on skin needs and safety.",
+        },
+        {
+          title: "Premium protocols",
+          description: "Modern equipment and evidence-based procedures.",
+        },
+        {
+          title: "Natural results",
+          description: "Enhancement that still looks like you.",
+        },
+        {
+          title: "Hygiene-first",
+          description: "Clinic-grade safety practices and sterility.",
+        },
+        {
+          title: "Aftercare support",
+          description: "Post-procedure guidance for best outcomes.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Are anti-ageing treatments safe?",
+          answer:
+            "Yes—when chosen appropriately for your skin and performed under clinical guidance. We recommend options based on suitability and safety.",
+        },
+        {
+          question: "How soon will I see results?",
+          answer:
+            "Some treatments give an instant glow, while collagen remodeling takes weeks. Your doctor will explain the expected timeline.",
+        },
+        {
+          question: "Will I look unnatural?",
+          answer:
+            "Our focus is subtle, natural-looking improvement. We avoid over-treatment and design a balanced plan.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Downtime depends on the procedure. Many treatments have minimal downtime, while resurfacing may need a few days.",
+        },
+        {
+          question: "How many sessions are required?",
+          answer:
+            "Most plans are multi-session for best results. The exact number depends on goals, skin type, and chosen procedure.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

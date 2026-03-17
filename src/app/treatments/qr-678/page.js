@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "QR-678 Hair Treatment | Healthfusion Multispeciality Clinic",
   description: "QR-678 peptide therapy for advanced hair regrowth and follicle rejuvenation.",
 };
 
 export default function QR678Page() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">QR-678 Treatment</h1>
-            <p className="text-lg text-gray-600 mb-8">Revolutionary peptide-based therapy for hair regrowth and strengthening</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is QR-678?</h2>
-              <p className="text-gray-600 mb-4">QR-678 is a patented, advanced peptide formulation designed specifically for hair regrowth. This breakthrough treatment contains a unique combination of growth factors, peptides, and nutrients that directly target hair follicles to stimulate regrowth and prevent hair loss.</p>
-              <p className="text-gray-600">The treatment is administered through micro-injections into the scalp, delivering these powerful ingredients exactly where they are needed most for optimal results.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Peptide Technology", desc: "Advanced peptide formulation", icon: "🧬"}, {title: "Faster Growth", desc: "Accelerated hair regrowth cycle", icon: "⚡"}, {title: "Stronger Hair", desc: "Improves hair shaft strength", icon: "💪"}, {title: "Stops Hair Fall", desc: "Reduces telogen effluvium", icon: "🛑"}, {title: "Safe & Effective", desc: "Clinically tested formula", icon: "🛡️"}, {title: "All Hair Types", desc: "Works for men and women", icon: "👤"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Assessment", desc: "Scalp and hair analysis"}, {step: "02", title: "Preparation", desc: "Scalp cleansing and numbing"}, {step: "03", title: "Injection", desc: "QR-678 micro-injections"}, {step: "04", title: "Results", desc: "Visible growth in 3-4 months"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Revolutionary Hair Regrowth</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your QR-678 Treatment today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="QR-678 Hair Treatment"
+      description="Advanced peptide-based scalp micro-injection therapy designed to support follicle rejuvenation and improved hair density—planned under clinical guidance for suitable candidates."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding QR-678",
+        description:
+          "QR-678 is a peptide-based formulation delivered via micro-injections into the scalp. It is designed to target follicles and support improved growth signals in suitable candidates.\n\nYour dermatologist will assess your hair-loss pattern, scalp health, and suitability before recommending QR-678 as part of a broader hair restoration plan.",
+        image:
+          "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns / Symptoms"
+      causes={[
+        { title: "Hair thinning" },
+        { title: "Pattern hair loss" },
+        { title: "Reduced density" },
+        { title: "Ongoing shedding" },
+        { title: "Weak follicles" },
+        { title: "Need for advanced therapy" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "QR-678 Session Protocol",
+          description: "A planned series of sessions under supervision.",
+        },
+        {
+          title: "Combination Planning",
+          description: "Often paired with medical therapy and scalp care.",
+        },
+        {
+          title: "Scalp Inflammation Control",
+          description: "Treat dandruff/itching first if needed.",
+        },
+        {
+          title: "Lifestyle & Nutrition Support",
+          description: "Support for triggers that worsen hair fall.",
+        },
+        {
+          title: "Maintenance Plan",
+          description: "Long-term plan to sustain gains.",
+        },
+        {
+          title: "Hair Transplant Planning",
+          description: "For advanced cases where surgery is needed.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Supports follicle rejuvenation" },
+        { title: "Improved density over time" },
+        { title: "Non-surgical option" },
+        { title: "Clinically administered" },
+        { title: "Personalized planning" },
+        { title: "Minimal downtime" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Assessment",
+          description: "We evaluate pattern and suitability.",
+        },
+        {
+          title: "Preparation",
+          description: "Scalp cleansing and comfort measures.",
+        },
+        {
+          title: "Micro-Injections",
+          description: "QR-678 delivered to targeted areas.",
+        },
+        {
+          title: "Aftercare",
+          description: "Guidance for scalp care and activity.",
+        },
+        {
+          title: "Follow-up",
+          description: "Session scheduling and maintenance planning.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Diagnosis-first approach",
+          description: "We recommend QR-678 when it fits your condition.",
+        },
+        {
+          title: "Safe protocols",
+          description: "Hygiene-first injection standards.",
+        },
+        {
+          title: "Combination planning",
+          description: "Long-term results focus.",
+        },
+        {
+          title: "Comfort-first care",
+          description: "Support to reduce discomfort.",
+        },
+        {
+          title: "Maintenance guidance",
+          description: "Sustainable plan to protect results.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is QR-678 safe?",
+          answer:
+            "Suitability is confirmed during consultation. It is administered under clinical protocols.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "Protocols vary. Your dermatologist will recommend the right schedule.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Hair growth changes occur gradually over months.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Downtime is minimal. Mild tenderness can occur briefly.",
+        },
+        {
+          question: "Can I combine QR-678 with PRP/GFC?",
+          answer:
+            "Combination planning may be possible depending on your diagnosis and goals.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Hair Transformation Today",
+        description: "Book your consultation with our hair & scalp experts.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

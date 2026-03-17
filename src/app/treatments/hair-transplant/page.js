@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Hair Transplant | Healthfusion Multispeciality Clinic",
   description: "FUE and FUT hair transplant procedures for permanent hair restoration solutions.",
 };
 
 export default function HairTransplantPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Hair Transplant</h1>
-            <p className="text-lg text-gray-600 mb-8">Permanent hair restoration with FUE and FUT techniques</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is Hair Transplant?</h2>
-              <p className="text-gray-600 mb-4">Hair transplantation is a surgical procedure that moves hair follicles from a donor area (usually the back of the head) to balding or thinning areas. We offer both FUE (Follicular Unit Extraction) and FUT (Follicular Unit Transplantation) methods.</p>
-              <p className="text-gray-600">Our experienced surgeons use advanced techniques to ensure natural-looking results with minimal scarring and maximum graft survival rates.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Our Techniques</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[{title: "FUE Method", desc: "Individual follicle extraction with minimal scarring. No stitches required, faster recovery time.", icon: "✅"}, {title: "FUT Method", desc: "Strip method for larger graft numbers. Best for extensive baldness cases.", icon: "📋"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Consultation", desc: "Hair analysis and graft estimation"}, {step: "02", title: "Design", desc: "Hairline design and planning"}, {step: "03", title: "Procedure", desc: "Graft extraction and implantation"}, {step: "04", title: "Recovery", desc: "Healing and growth monitoring"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Restore Your Hair Permanently</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your hair transplant consultation today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Hair Transplant"
+      description="A permanent hair restoration solution planned with precision for natural hairline design, high graft survival, and a premium, safety-first surgical experience."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Hair Transplant",
+        description:
+          "Hair transplant is a surgical procedure that relocates healthy hair follicles from a donor area (usually the back of the scalp) to thinning or balding areas. It is designed for long-term, natural-looking restoration when planned correctly.\n\nAt Healthfusion, we focus on hairline aesthetics, graft planning, and safe surgical protocols to achieve refined results.",
+        image:
+          "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Causes / Symptoms"
+      causes={[
+        { title: "Male/female pattern baldness" },
+        { title: "Receding hairline" },
+        { title: "Crown thinning" },
+        { title: "Low hair density" },
+        { title: "Stable hair loss (suitability check)" },
+        { title: "Desire for permanent restoration" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "FUE (Follicular Unit Extraction)",
+          description: "Individual graft extraction for minimal scarring and refined healing.",
+        },
+        {
+          title: "FUT (Follicular Unit Transplantation)",
+          description: "Strip method when higher graft count is needed in suitable cases.",
+        },
+        {
+          title: "Hairline Design",
+          description: "Aesthetic planning for natural front hairline and temples.",
+        },
+        {
+          title: "Density Planning",
+          description: "Graft distribution planned for balanced coverage.",
+        },
+        {
+          title: "Medical Therapy Support",
+          description: "Pre/post care to support existing hair and maintenance.",
+        },
+        {
+          title: "Aftercare Program",
+          description: "Wash schedule, medications, and follow-up guidance.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Permanent hair restoration" },
+        { title: "Natural-looking hairline" },
+        { title: "Improved confidence" },
+        { title: "Long-term results with maintenance" },
+        { title: "Custom density and design" },
+        { title: "Expert-guided aftercare" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "Hair analysis, donor assessment, and graft estimation.",
+        },
+        {
+          title: "Design",
+          description: "Hairline design and recipient area planning.",
+        },
+        {
+          title: "Procedure",
+          description: "Graft extraction and implantation under safe protocols.",
+        },
+        {
+          title: "Recovery",
+          description: "Healing guidance, medications, and wash schedule.",
+        },
+        {
+          title: "Follow-up",
+          description: "Growth tracking and maintenance planning.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Aesthetic hairline design",
+          description: "Natural-looking planning based on face structure.",
+        },
+        {
+          title: "Precision graft planning",
+          description: "Balanced density and donor preservation.",
+        },
+        {
+          title: "Safety-first surgery",
+          description: "Hygiene and clinical standards.",
+        },
+        {
+          title: "Premium aftercare",
+          description: "Clear steps for healing and long-term success.",
+        },
+        {
+          title: "Long-term strategy",
+          description: "Maintenance planning for existing hair.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Which technique is better—FUE or FUT?",
+          answer:
+            "It depends on donor area, graft requirement, and goals. We recommend the best method after evaluation.",
+        },
+        {
+          question: "When will I see growth?",
+          answer:
+            "New growth typically becomes noticeable over months; final results take longer.",
+        },
+        {
+          question: "Is the procedure painful?",
+          answer:
+            "Local anesthesia is used. Discomfort is usually mild and managed with aftercare.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "You will need a recovery period. Your doctor will provide a detailed schedule.",
+        },
+        {
+          question: "Are results permanent?",
+          answer:
+            "Transplanted hair is typically long-lasting, but existing hair may continue to thin. Maintenance is important.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Hair Transformation Today",
+        description: "Book your consultation with our hair & scalp experts.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

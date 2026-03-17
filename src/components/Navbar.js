@@ -3,20 +3,21 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AppointmentModal from "@/components/AppointmentModal";
 import { 
   ChevronDown, 
   Calendar, 
   Phone, 
   Menu, 
   X,
-  Globe,
-  MapPin
+  Globe
 } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,17 +28,9 @@ export default function Navbar() {
   }, []);
 
   const quickLinks = [
-    { name: "About Us", href: "#about" },
+    { name: "About Us", href: "/about" },
     { name: "Blog", href: "#blog" },
     { name: "Ask Expert", href: "#expert" },
-  ];
-
-  const locations = [
-    { name: "Pune", href: "#pune" },
-    { name: "Mumbai", href: "#mumbai" },
-    { name: "Delhi", href: "#delhi" },
-    { name: "Hyderabad", href: "#hyderabad" },
-    { name: "Bangalore", href: "#bangalore" },
   ];
 
   const megaMenuData = {
@@ -81,6 +74,50 @@ export default function Navbar() {
         { name: "Laser De-Pigmentation", href: "/treatments/laser-depigmentation" },
       ],
     },
+    ayurvedaTreatments: {
+      title: "Ayurveda Treatments",
+      items: [
+        { name: "Nadi Parikshan", href: "/treatments/ayurveda/nadi-parikshan" },
+        { name: "Prakriti Parikshan", href: "/treatments/ayurveda/prakriti-parikshan" },
+        { name: "Agnikarma", href: "/treatments/ayurveda/agnikarma" },
+        { name: "Viddhakarma", href: "/treatments/ayurveda/viddhakarma" },
+        { name: "Suvarnaprashan", href: "/treatments/ayurveda/suvarnaprashan" },
+        { name: "Panchakarma", href: "/treatments/ayurveda/panchakarma" },
+      ],
+    },
+  };
+
+  const galleryMegaMenuData = {
+    ayurvedaClinic: {
+      title: "Ayurveda Clinic Gallery",
+      items: [
+        { name: "Clinic Interior", href: "/gallery/ayurveda/clinic" },
+        { name: "Treatment Rooms", href: "/gallery/ayurveda/treatment-rooms" },
+        { name: "Panchakarma Sessions", href: "/gallery/ayurveda/panchakarma" },
+        { name: "Ayurvedic Facials", href: "/gallery/ayurveda/facial" },
+        { name: "Consultation Sessions", href: "/gallery/ayurveda/consultation" },
+      ],
+    },
+    dermatologyClinic: {
+      title: "Dermatology Clinic Gallery",
+      items: [
+        { name: "Clinic Interior", href: "/gallery/derma/clinic" },
+        { name: "Treatment Rooms", href: "/gallery/derma/treatment-rooms" },
+        { name: "Skin Procedures", href: "/gallery/derma/skin-procedures" },
+        { name: "Laser Treatments", href: "/gallery/derma/laser-treatments" },
+        { name: "Facial Treatments", href: "/gallery/derma/facial-treatments" },
+      ],
+    },
+    machinesTechnology: {
+      title: "Machines & Technology",
+      items: [
+        { name: "Laser Machines", href: "/gallery/machines/laser" },
+        { name: "Skin Treatment Machines", href: "/gallery/machines/skin-treatment" },
+        { name: "Hair Treatment Machines", href: "/gallery/machines/hair-treatment" },
+        { name: "RF & MNRF Machines", href: "/gallery/machines/rf" },
+        { name: "Facial Machines", href: "/gallery/machines/facial-machines" },
+      ],
+    },
   };
 
   const mainMenuItems = [
@@ -97,14 +134,14 @@ export default function Navbar() {
     },
     { 
       name: "Gallery", 
-      hasDropdown: false, 
-      href: "#gallery" 
+      hasDropdown: true, 
+      dropdownType: "gallery",
+      href: "/gallery" 
     },
     { 
-      name: "Locations", 
-      hasDropdown: true, 
-      dropdownType: "locations",
-      href: "#locations" 
+      name: "Appointment",
+      hasDropdown: false,
+      href: "/appointment"
     },
   ];
 
@@ -114,6 +151,16 @@ export default function Navbar() {
 
   const handleDropdownLeave = () => {
     setActiveDropdown(null);
+  };
+
+  const openAppointmentModal = () => {
+    setIsAppointmentModalOpen(true);
+    setIsMobileMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  const closeAppointmentModal = () => {
+    setIsAppointmentModalOpen(false);
   };
 
   return (
@@ -138,7 +185,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="hover:text-[#00A651] transition-colors"
+                  className="hover:text-[#0077C8] transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -146,11 +193,11 @@ export default function Navbar() {
             </div>
 
             {/* Right - Customer Care */}
-            <div className="flex items-center gap-4">
-              <span className="hidden sm:inline">Customer Care - 8 AM to 11:30 PM</span>
+            <div className="flex items-center gap-4 text-base">
+              <span className="hidden sm:inline">Customer Care - 9:00 AM to 7:30 PM</span>
               <a 
                 href="tel:9270216369" 
-                className="flex items-center gap-2 text-[#0077C8] font-semibold hover:text-[#00A651] transition-colors"
+                className="flex items-center gap-2 text-[#0077C8] font-semibold hover:text-blue-700 transition-colors"
               >
                 <Phone className="w-4 h-4" />
                 92702 16369
@@ -169,13 +216,13 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-22 ">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <img 
                 src="/logo1.png" 
                 alt="Clinic Logo" 
-                className="h-18 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </Link>
 
@@ -190,7 +237,7 @@ export default function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 font-medium text-[#0B0F19] transition-colors hover:text-[#00A651]"
+                    className="flex items-center gap-1 font-medium text-[#0B0F19] transition-colors hover:text-[#0077C8]"
                   >
                     {item.name}
                     {item.hasDropdown && (
@@ -200,8 +247,8 @@ export default function Navbar() {
 
                   {/* Mega Menu Dropdown */}
                   {item.dropdownType === "mega" && activeDropdown === item.name && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[700px] bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
-                      <div className="grid grid-cols-3 gap-8">
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[900px] bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
+                      <div className="grid grid-cols-4 gap-6">
                         {Object.values(megaMenuData).map((category) => (
                           <div key={category.title}>
                             <h4 className="font-bold text-[#0B0F19] mb-4 text-lg border-b border-gray-100 pb-2">
@@ -212,7 +259,7 @@ export default function Navbar() {
                                 <li key={treatment.name}>
                                   <Link
                                     href={treatment.href}
-                                    className="text-gray-600 hover:text-[#00A651] transition-colors text-sm"
+                                    className="text-gray-600 hover:text-[#0077C8] transition-colors text-sm"
                                   >
                                     {treatment.name}
                                   </Link>
@@ -222,24 +269,61 @@ export default function Navbar() {
                           </div>
                         ))}
                       </div>
+                      {/* View All Button */}
+                      <div className="mt-6 pt-6 border-t border-gray-100 text-center">
+                        <Link
+                          href="/treatments"
+                          className="inline-flex items-center gap-2 bg-[#0077C8] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                        >
+                          View All Treatments
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Gallery Mega Menu Dropdown */}
+                  {item.dropdownType === "gallery" && activeDropdown === item.name && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
+                      <div className="grid grid-cols-3 gap-6">
+                        {Object.values(galleryMegaMenuData).map((category) => (
+                          <div key={category.title}>
+                            <h4 className="font-bold text-[#0B0F19] mb-4 text-lg border-b border-gray-100 pb-2">
+                              {category.title}
+                            </h4>
+                            <ul className="space-y-3">
+                              {category.items.map((item) => (
+                                <li key={item.name}>
+                                  <Link
+                                    href={item.href}
+                                    className="text-gray-600 hover:text-[#0077C8] transition-colors text-sm"
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                      {/* View All Button */}
+                      <div className="mt-6 pt-6 border-t border-gray-100 text-center">
+                        <Link
+                          href="/gallery"
+                          className="inline-flex items-center gap-2 bg-[#0077C8] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                        >
+                          View All Gallery
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      </div>
                     </div>
                   )}
 
                   {/* Locations Dropdown */}
-                  {item.dropdownType === "locations" && activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl py-2 border border-gray-100">
-                      {locations.map((location) => (
-                        <Link
-                          key={location.name}
-                          href={location.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm text-[#0B0F19] hover:bg-[#0077C8]/10 hover:text-[#0077C8] transition-colors"
-                        >
-                          <MapPin className="w-4 h-4" />
-                          {location.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
@@ -247,7 +331,11 @@ export default function Navbar() {
             {/* Right Section - Book Button */}
             <div className="hidden lg:flex items-center">
               {/* Book Appointment Button */}
-              <button className="flex items-center gap-2 bg-[#0077C8] text-white px-7 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
+              <button
+                type="button"
+                onClick={openAppointmentModal}
+                className="flex items-center gap-2 bg-[#0077C8] text-white px-7 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+              >
                 <Calendar className="w-4 h-4" />
                 Book Appointment
               </button>
@@ -292,7 +380,7 @@ export default function Navbar() {
                                 <li key={treatment.name}>
                                   <Link
                                     href={treatment.href}
-                                    className="text-gray-600 hover:text-[#00A651] transition-colors text-sm block py-1"
+                                    className="text-gray-600 hover:text-[#0077C8] transition-colors text-sm block py-1"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                   >
                                     {treatment.name}
@@ -306,8 +394,41 @@ export default function Navbar() {
                     )}
                   </div>
 
+                  {/* Gallery with Submenu */}
+                  <div>
+                    <button
+                      onClick={() => setActiveDropdown(activeDropdown === "Gallery" ? null : "Gallery")}
+                      className="flex items-center justify-between w-full py-3 text-lg font-medium text-[#0B0F19] border-b border-gray-100"
+                    >
+                      Gallery
+                      <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === "Gallery" ? "rotate-180" : ""}`} />
+                    </button>
+                    {activeDropdown === "Gallery" && (
+                      <div className="pl-4 py-3 space-y-3">
+                        {Object.values(galleryMegaMenuData).map((category) => (
+                          <div key={category.title} className="mb-4">
+                            <h4 className="font-semibold text-[#00A651] mb-2">{category.title}</h4>
+                            <ul className="space-y-2">
+                              {category.items.map((item) => (
+                                <li key={item.name}>
+                                  <Link
+                                    href={item.href}
+                                    className="text-gray-600 hover:text-[#0077C8] transition-colors text-sm block py-1"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
                   {/* Other Menu Items */}
-                  {mainMenuItems.filter(item => item.name !== "Treatments").map((item) => (
+                  {mainMenuItems.filter(item => item.name !== "Treatments" && item.name !== "Gallery").map((item) => (
                     <div key={item.name}>
                       {item.hasDropdown ? (
                         <>
@@ -324,7 +445,7 @@ export default function Navbar() {
                                 <Link
                                   key={location.name}
                                   href={location.href}
-                                  className="flex items-center gap-2 text-gray-600 hover:text-[#00A651] transition-colors py-2"
+                                  className="flex items-center gap-3 text-[#0B0F19] hover:text-blue-700 transition-colors py-2"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                   <MapPin className="w-4 h-4" />
@@ -347,7 +468,11 @@ export default function Navbar() {
                   ))}
 
                   {/* Mobile Book Appointment Button */}
-                  <button className="flex items-center justify-center gap-2 w-full bg-[#0077C8] text-white px-7 py-3 rounded-full font-semibold mt-6 shadow-md hover:bg-blue-700 transition-all duration-300">
+                  <button
+                    type="button"
+                    onClick={openAppointmentModal}
+                    className="flex items-center justify-center gap-2 w-full bg-[#0077C8] text-white px-7 py-3 rounded-full font-semibold mt-6 shadow-md hover:bg-blue-700 transition-all duration-300"
+                  >
                     <Calendar className="w-5 h-5" />
                     Book Appointment
                   </button>
@@ -359,11 +484,17 @@ export default function Navbar() {
       </nav>
 
       {/* Floating Book Appointment Button */}
-      <button className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#0077C8] text-white px-6 py-4 rounded-full font-semibold shadow-2xl hover:bg-blue-700 transition-all duration-300 hover:scale-105">
+      <button
+        type="button"
+        onClick={openAppointmentModal}
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#0077C8] text-white px-6 py-4 rounded-full font-semibold shadow-2xl hover:bg-blue-700 transition-all duration-300 hover:scale-105"
+      >
         <Calendar className="w-5 h-5" />
         <span className="hidden sm:inline">Book Free Consultation</span>
         <span className="sm:hidden">Book Now</span>
       </button>
+
+      <AppointmentModal open={isAppointmentModalOpen} onClose={closeAppointmentModal} />
     </>
   );
 }

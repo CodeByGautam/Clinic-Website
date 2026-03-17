@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Hair Loss Treatment | Healthfusion Multispeciality Clinic",
   description: "Comprehensive hair loss solutions including PRP, GFC, medications, and advanced therapies.",
 };
 
 export default function HairLossPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Hair Loss Treatment</h1>
-            <p className="text-lg text-gray-600 mb-8">Comprehensive solutions for all types of hair loss and thinning</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">Understanding Hair Loss</h2>
-              <p className="text-gray-600 mb-4">Hair loss affects millions and can be caused by genetics, hormones, stress, nutrition, or medical conditions. Our comprehensive approach addresses all types including androgenetic alopecia, telogen effluvium, and alopecia areata.</p>
-              <p className="text-gray-600">We offer customized treatment plans combining medical therapies, advanced procedures, and lifestyle guidance to stop hair loss and promote regrowth.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Options</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Medical Therapy", desc: "FDA-approved medications and topical solutions", icon: "💊"}, {title: "PRP Therapy", desc: "Platelet-rich plasma for natural regrowth", icon: "🧬"}, {title: "GFC Treatment", desc: "Advanced growth factor concentrate", icon: "⚡"}, {title: "Low-Level Laser", desc: "Laser therapy to stimulate follicles", icon: "🔦"}, {title: "Nutritional Support", desc: "Supplements and dietary guidance", icon: "🥗"}, {title: "Hair Transplant", desc: "Permanent surgical restoration", icon: "🌱"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Diagnosis", desc: "Identify cause and extent of hair loss"}, {step: "02", title: "Planning", desc: "Customized treatment protocol"}, {step: "03", title: "Treatment", desc: "Begin appropriate therapies"}, {step: "04", title: "Monitoring", desc: "Track progress and adjust as needed"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Stop Hair Loss Today</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your hair loss consultation today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Hair Loss Treatment"
+      description="A comprehensive, dermatologist-led approach to identify the cause of hair fall and build a premium treatment plan using medical therapy, regenerative options, and long-term maintenance."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Hair Loss",
+        description:
+          "Hair loss can be triggered by genetics, hormonal imbalance, nutritional deficiencies, stress, medical conditions, and scalp inflammation. Different patterns (androgenetic alopecia, telogen effluvium, alopecia areata) require different treatment strategies.\n\nOur clinic focuses on root-cause diagnosis, measurable tracking, and a combined plan that supports reduced shedding and improved density over time.",
+        image:
+          "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Causes / Symptoms"
+      causes={[
+        { title: "Genetic pattern baldness" },
+        { title: "Hormonal changes" },
+        { title: "Stress-related shedding" },
+        { title: "Nutritional deficiencies" },
+        { title: "Post-illness hair fall" },
+        { title: "Scalp inflammation" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Medical Therapy",
+          description: "Topical/oral treatments as advised based on diagnosis.",
+        },
+        {
+          title: "PRP Hair Therapy",
+          description: "Regenerative support for follicle stimulation.",
+        },
+        {
+          title: "GFC Treatment",
+          description: "Advanced growth-factor concentrate options for suitable cases.",
+        },
+        {
+          title: "Low-Level Laser Support",
+          description: "Adjunct therapy for scalp stimulation when advised.",
+        },
+        {
+          title: "Nutritional & Lifestyle Guidance",
+          description: "Sustainable changes to support hair health.",
+        },
+        {
+          title: "Hair Transplant Planning",
+          description: "For advanced loss when a permanent solution is needed.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Reduced hair fall with consistent protocol" },
+        { title: "Improved hair thickness and density" },
+        { title: "Better scalp health" },
+        { title: "Personalized plan based on diagnosis" },
+        { title: "Progress tracking and adjustments" },
+        { title: "Long-term maintenance strategy" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Diagnosis",
+          description: "We identify the pattern and likely root causes.",
+        },
+        {
+          title: "Plan Design",
+          description: "We combine therapies and home routine.",
+        },
+        {
+          title: "Treatment",
+          description: "In-clinic sessions and medications as advised.",
+        },
+        {
+          title: "Monitoring",
+          description: "Regular follow-ups and plan refinements.",
+        },
+        {
+          title: "Maintenance",
+          description: "Long-term care to reduce recurrence.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Root-cause approach",
+          description: "Treats triggers and patterns, not just hair fall.",
+        },
+        {
+          title: "Modern therapies",
+          description: "Access to regenerative and advanced options.",
+        },
+        {
+          title: "Personalized protocols",
+          description: "Plans tailored to your gender, age, and condition.",
+        },
+        {
+          title: "Hygiene-first clinic",
+          description: "Safe clinical standards.",
+        },
+        {
+          title: "Progress tracking",
+          description: "We measure and optimize over time.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "What is the best treatment for hair loss?",
+          answer:
+            "It depends on the cause. We recommend a plan after diagnosis.",
+        },
+        {
+          question: "How long does it take to see results?",
+          answer:
+            "Hair growth cycles take time. Many patients see visible improvement over months.",
+        },
+        {
+          question: "Do I need blood tests?",
+          answer:
+            "Sometimes. If nutritional or hormonal triggers are suspected, tests may be recommended.",
+        },
+        {
+          question: "Will the plan include medicines?",
+          answer:
+            "If appropriate, yes. Medical therapy can be part of many effective protocols.",
+        },
+        {
+          question: "Can stress cause hair fall?",
+          answer:
+            "Yes. Stress can trigger shedding, and addressing it can improve outcomes.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Hair Transformation Today",
+        description: "Book your consultation with our hair & scalp experts.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

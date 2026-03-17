@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Skin Booster Treatment | Healthfusion Multispeciality Clinic",
   description: "Skin booster injections with hyaluronic acid for deep hydration, improved elasticity, and radiant glow.",
 };
 
 export default function SkinBoosterPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1612810436541-336ad4dc9a96?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Skin Booster</h1>
-            <p className="text-lg text-gray-600 mb-8">Deep hydration from within with hyaluronic acid micro-injections</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is Skin Booster?</h2>
-              <p className="text-gray-600 mb-4">Skin boosters are micro-injections of hyaluronic acid that deeply hydrate the skin from within. Unlike dermal fillers that add volume, skin boosters improve skin quality by increasing hydration, elasticity, and smoothness.</p>
-              <p className="text-gray-600">The treatment involves injecting small amounts of hyaluronic acid into the skin&apos;s surface, creating a glowing, dewy complexion that looks natural and refreshed.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Key Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Deep Hydration", desc: "Hyaluronic acid attracts moisture to skin", icon: "💧"}, {title: "Improved Elasticity", desc: "Restores skin bounce and firmness", icon: "🧬"}, {title: "Radiant Glow", desc: "Dewy, luminous complexion", icon: "✨"}, {title: "Fine Lines", desc: "Reduces appearance of fine lines", icon: "🌸"}, {title: "Skin Texture", desc: "Smoothens rough, uneven skin", icon: "🎯"}, {title: "Long-Lasting", desc: "Results last 6-9 months", icon: "⏳"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Consultation", desc: "Assess skin hydration needs"}, {step: "02", title: "Numbing", desc: "Topical anesthetic applied"}, {step: "03", title: "Micro-injection", desc: "Tiny HA injections across face"}, {step: "04", title: "Hydration", desc: "Serums to enhance results"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Hydrate Your Skin From Within</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your Skin Booster treatment today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Skin Booster Treatment"
+      description="Deep hydration and skin-quality improvement using micro-injections (as advised) to support elasticity, glow, and a smoother, more refreshed look."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Skin Boosters",
+        description:
+          "Skin boosters are micro-injections commonly formulated with hyaluronic acid designed to improve hydration and skin quality from within. Unlike dermal fillers (which add volume and shape), skin boosters focus on glow, elasticity, and overall texture improvement.\n\nThey’re often chosen for dehydrated skin, dullness, early fine lines, and rough texture.",
+        image:
+          "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns / Symptoms"
+      causes={[
+        { title: "Dehydrated, dull skin" },
+        { title: "Loss of elasticity" },
+        { title: "Rough texture" },
+        { title: "Early fine lines" },
+        { title: "Post-treatment glow maintenance" },
+        { title: "Tired-looking complexion" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Hydration-Focused Skin Boosters",
+          description: "Designed to improve plumpness and hydration.",
+        },
+        {
+          title: "Texture & Elasticity Support",
+          description: "Supports smoother texture and firmness over time.",
+        },
+        {
+          title: "Glow Maintenance Protocols",
+          description: "Popular for keeping skin fresh and dewy.",
+        },
+        {
+          title: "Combination Planning",
+          description: "Can be paired with other treatments as advised.",
+        },
+        {
+          title: "Aftercare & Barrier Support",
+          description: "Guidance to protect and maintain results.",
+        },
+        {
+          title: "Maintenance Schedule",
+          description: "Personalized plan based on goals and skin type.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Deep hydration and plumpness" },
+        { title: "Improved glow and radiance" },
+        { title: "Smoother skin texture" },
+        { title: "Elasticity support" },
+        { title: "Natural-looking results" },
+        { title: "Minimal downtime in many cases" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We assess hydration needs and suitability.",
+        },
+        {
+          title: "Preparation",
+          description: "Cleansing and numbing for comfort.",
+        },
+        {
+          title: "Micro-Injections",
+          description: "Small injections across targeted areas.",
+        },
+        {
+          title: "Soothing Finish",
+          description: "Hydrating aftercare and sun protection guidance.",
+        },
+        {
+          title: "Maintenance",
+          description: "Follow-up sessions planned as needed.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Expert planning",
+          description: "Treatment selected based on skin goals and safety.",
+        },
+        {
+          title: "Natural glow focus",
+          description: "Enhances skin quality without changing features.",
+        },
+        {
+          title: "Hygiene-first clinic",
+          description: "Safe standards and sterile protocols.",
+        },
+        {
+          title: "Premium aftercare",
+          description: "Guidance to maintain hydration and results.",
+        },
+        {
+          title: "Personalized plans",
+          description: "Sessions tailored to your timeline and needs.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is a skin booster the same as a filler?",
+          answer:
+            "No. Fillers add shape/volume, while skin boosters primarily improve hydration and skin quality.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "Many people do a series, then maintenance. Your clinician will recommend a plan.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "You may have small bumps or redness for a short time. Most patients resume routine quickly.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Hydration glow can appear early, while skin quality improvements build over sessions.",
+        },
+        {
+          question: "How long do results last?",
+          answer:
+            "Duration varies by product and skin type. Your doctor will guide realistic timelines.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

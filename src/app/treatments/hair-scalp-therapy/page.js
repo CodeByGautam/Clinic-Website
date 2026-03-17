@@ -1,88 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Hair & Scalp Therapy | Healthfusion Multispeciality Clinic",
   description: "Expert hair and scalp treatments at Healthfusion Multispeciality Clinic. Solutions for hair loss, dandruff, and scalp conditions.",
 };
 
 export default function HairScalpTherapyPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">
-              Hair & Scalp Therapy
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Restore your hair health with our comprehensive hair and scalp 
-              treatments. From hair loss to scalp conditions, we have solutions.
-            </p>
-            <button className="px-8 py-4 bg-[#00A651] text-white rounded-full font-semibold hover:bg-[#0077C8] transition-all duration-300">
-              Book Consultation
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">
-                Healthy Hair Starts Here
-              </h2>
-              <p className="text-gray-600 mb-4">
-                Hair and scalp issues can affect anyone and impact confidence. 
-                Our dermatologists specialize in diagnosing and treating various 
-                hair conditions, from pattern baldness to scalp disorders.
-              </p>
-              <p className="text-gray-600">
-                We offer a range of proven treatments to help you achieve 
-                thicker, healthier hair and a balanced scalp.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Options */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Our Hair & Scalp Solutions
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "PRP Hair Treatment",
-                description: "Stimulate natural hair growth using your own platelet-rich plasma.",
-              },
-              {
-                title: "Hair Transplant",
-                description: "Permanent solution for hair loss with natural-looking results.",
-              },
-              {
-                title: "Scalp Treatments",
-                description: "Targeted solutions for dandruff, psoriasis, and other scalp conditions.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Hair & Scalp Therapy"
+      description="Dermatologist-guided diagnosis and premium treatment plans for hair fall, thinning, dandruff, and scalp health—designed for long-term, measurable improvement."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Hair & Scalp Health",
+        description:
+          "Healthy hair begins with a healthy scalp. Hair fall and thinning can be caused by genetics, hormones, nutritional deficiencies, stress, medical conditions, or scalp inflammation. The right treatment depends on identifying the root cause—not just symptoms.\n\nAt Healthfusion, we evaluate your scalp, hair density, and lifestyle factors to build a personalized plan using advanced therapies and maintenance guidance.",
+        image:
+          "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Causes / Symptoms"
+      causes={[
+        { title: "Hair fall and thinning" },
+        { title: "Dandruff and itching" },
+        { title: "Oily scalp or buildup" },
+        { title: "Dry, flaky scalp" },
+        { title: "Patchy hair loss" },
+        { title: "Weak hair and breakage" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Scalp Analysis & Diagnosis",
+          description: "Identify pattern and triggers to plan the right therapy.",
+        },
+        {
+          title: "PRP / Regenerative Therapies",
+          description: "Supports follicle stimulation and hair strength.",
+        },
+        {
+          title: "GFC / Advanced Growth Factor Options",
+          description: "For suitable candidates looking for advanced stimulation.",
+        },
+        {
+          title: "Medical Therapy",
+          description: "Dermatologist-recommended topical/oral treatments.",
+        },
+        {
+          title: "Anti-Dandruff & Scalp Treatments",
+          description: "For itching, flakes, and inflammation control.",
+        },
+        {
+          title: "Hair Transplant Guidance",
+          description: "When appropriate, a permanent option for advanced hair loss.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Reduced hair fall with consistent plan" },
+        { title: "Improved scalp comfort and clarity" },
+        { title: "Better hair thickness and strength" },
+        { title: "Targets root causes" },
+        { title: "Personalized treatment plan" },
+        { title: "Long-term maintenance guidance" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We understand hair concerns, history, and goals.",
+        },
+        {
+          title: "Scalp Assessment",
+          description: "We evaluate density, inflammation, and scalp condition.",
+        },
+        {
+          title: "Plan Design",
+          description: "Therapies + home routine are selected for your needs.",
+        },
+        {
+          title: "Treatment Sessions",
+          description: "In-clinic sessions scheduled as per protocol.",
+        },
+        {
+          title: "Follow-up",
+          description: "Progress tracking and plan adjustments.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Root-cause diagnosis",
+          description: "We treat the cause, not just the symptom.",
+        },
+        {
+          title: "Advanced therapies",
+          description: "Modern hair restoration options under supervision.",
+        },
+        {
+          title: "Personalized protocols",
+          description: "Plans adapted to your hair type and lifestyle.",
+        },
+        {
+          title: "Hygiene-first clinic",
+          description: "Safe clinical standards and clean environment.",
+        },
+        {
+          title: "Long-term support",
+          description: "Maintenance guidance to sustain results.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "How do you diagnose the cause of hair fall?",
+          answer:
+            "We review history, examine scalp and density patterns, and may recommend relevant tests if needed.",
+        },
+        {
+          question: "How soon will I see improvement?",
+          answer:
+            "Hair growth takes time. Many plans show visible change over weeks to months depending on the cause.",
+        },
+        {
+          question: "Do treatments work for both men and women?",
+          answer:
+            "Yes—protocols are customized based on diagnosis and individual factors.",
+        },
+        {
+          question: "Is hair fall always due to genetics?",
+          answer:
+            "Not always. Stress, nutrition, hormones, and scalp inflammation are common contributors.",
+        },
+        {
+          question: "Can dandruff cause hair fall?",
+          answer:
+            "Inflammation and scratching can worsen hair fall. Treating scalp health is important.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Hair Transformation Today",
+        description: "Book your consultation with our hair & scalp experts.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrustSection from "@/components/TrustSection";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -9,12 +8,10 @@ import DoctorsSection from "@/components/DoctorsSection";
 import Testimonials from "@/components/Testimonials";
 import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
+    <>
       <HeroSection />
       <TrustSection />
       <PopularTreatments />
@@ -25,7 +22,6 @@ export default function Home() {
       <StatsSection />
       <Testimonials />
       <CTASection />
-      <Footer />
-    </main>
+    </>
   );
 }

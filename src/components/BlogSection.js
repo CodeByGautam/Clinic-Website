@@ -73,7 +73,7 @@ export default function BlogSection() {
                   <span>•</span>
                   <span>{post.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#00A651] transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold text-[#0B0F19] mb-3 group-hover:text-[#0077C8] transition-colors line-clamp-2">
                   {post.title}
                 </h3>
                 <p className="text-gray-600 mb-4 line-clamp-3">

@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "GFC Hair Treatment | Healthfusion Multispeciality Clinic",
   description: "Growth Factor Concentrate therapy for advanced hair regrowth and follicle stimulation.",
 };
 
 export default function GFCtreatmentPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">GFC Treatment</h1>
-            <p className="text-lg text-gray-600 mb-8">Growth Factor Concentrate - Advanced therapy for hair regrowth</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is GFC Treatment?</h2>
-              <p className="text-gray-600 mb-4">Growth Factor Concentrate (GFC) is an advanced hair restoration treatment that extracts high concentrations of growth factors from your own blood. It contains 7-10 times more growth factors than traditional PRP, making it highly effective for hair regrowth.</p>
-              <p className="text-gray-600">GFC specifically targets hair follicles, activating dormant cells and stimulating new hair growth with faster and more visible results compared to conventional treatments.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">GFC vs PRP: Advantages</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Higher Concentration", desc: "7-10x more growth factors than PRP", icon: "📊"}, {title: "Faster Results", desc: "Visible improvement in 2-3 months", icon: "⚡"}, {title: "Pure Growth Factors", desc: "No red blood cells, pure concentrate", icon: "🧪"}, {title: "Better Hair Density", desc: "Superior follicle stimulation", icon: "💪"}, {title: "Fewer Sessions", desc: "Achieve results with fewer treatments", icon: "📅"}, {title: "No Side Effects", desc: "Completely autologous and safe", icon: "🛡️"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Collection", desc: "Blood drawn in special tubes"}, {step: "02", title: "Processing", desc: "Advanced centrifugation for GFC"}, {step: "03", title: "Activation", desc: "Growth factors activated"}, {step: "04", title: "Injection", desc: "Delivered to scalp areas"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Advanced Hair Regrowth</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your GFC Treatment today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="GFC Hair Treatment"
+      description="Advanced growth factor concentrate therapy designed to support follicle stimulation and improved hair density—planned under dermatologist guidance for suitable candidates."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding GFC",
+        description:
+          "Growth Factor Concentrate (GFC) is a regenerative hair therapy that uses a processed concentrate derived from your own blood to deliver a higher concentration of growth factors compared to traditional PRP. It is designed to support follicle stimulation and hair regrowth in appropriate candidates.\n\nTreatment planning depends on hair-loss pattern, scalp condition, and overall suitability.",
+        image:
+          "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns / Symptoms"
+      causes={[
+        { title: "Hair thinning" },
+        { title: "Early to moderate pattern hair loss" },
+        { title: "Reduced hair density" },
+        { title: "Excessive shedding" },
+        { title: "Weak hair shafts" },
+        { title: "Need for advanced stimulation" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "GFC Session Protocol",
+          description: "A planned series of sessions based on diagnosis.",
+        },
+        {
+          title: "GFC vs PRP Selection",
+          description: "We recommend the right option based on suitability.",
+        },
+        {
+          title: "Combination Planning",
+          description: "May be paired with medical therapy for better outcomes.",
+        },
+        {
+          title: "Scalp Inflammation Control",
+          description: "Treat dandruff/itching first if needed.",
+        },
+        {
+          title: "Nutritional Support",
+          description: "If deficiencies are contributing to hair loss.",
+        },
+        {
+          title: "Maintenance Sessions",
+          description: "Long-term plan to sustain improvements.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Advanced follicle stimulation" },
+        { title: "Supports improved density" },
+        { title: "Autologous (derived from your blood)" },
+        { title: "Non-surgical option" },
+        { title: "Personalized planning" },
+        { title: "Minimal downtime" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We evaluate hair loss pattern and suitability.",
+        },
+        {
+          title: "Blood Collection",
+          description: "Blood sample collected in appropriate tubes.",
+        },
+        {
+          title: "Processing",
+          description: "Advanced processing to prepare growth factor concentrate.",
+        },
+        {
+          title: "Scalp Delivery",
+          description: "GFC delivered to targeted areas with safe protocols.",
+        },
+        {
+          title: "Follow-up",
+          description: "Session schedule and home routine guidance.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Diagnosis-first planning",
+          description: "We recommend GFC only when appropriate.",
+        },
+        {
+          title: "Safe protocols",
+          description: "Hygiene-first injections and aftercare.",
+        },
+        {
+          title: "Combination approach",
+          description: "Medical therapy + regenerative support.",
+        },
+        {
+          title: "Comfort-focused care",
+          description: "Supportive measures to minimize discomfort.",
+        },
+        {
+          title: "Long-term maintenance",
+          description: "Plans designed for sustained improvements.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "How is GFC different from PRP?",
+          answer:
+            "GFC is designed to deliver a more concentrated growth factor formulation. Suitability is confirmed during consultation.",
+        },
+        {
+          question: "How many sessions are needed?",
+          answer:
+            "Most protocols involve multiple sessions. Your dermatologist will recommend the best schedule.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Hair changes occur gradually over months due to the natural growth cycle.",
+        },
+        {
+          question: "Is it safe?",
+          answer:
+            "It uses autologous components (from your own blood) and is performed under clinical protocols.",
+        },
+        {
+          question: "Can I combine GFC with medicines?",
+          answer:
+            "Often yes—combination planning is common for long-term outcomes.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Hair Transformation Today",
+        description: "Book your consultation with our hair & scalp experts.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

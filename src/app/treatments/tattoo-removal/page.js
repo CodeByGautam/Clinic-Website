@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Tattoo Removal | Healthfusion Multispeciality Clinic",
   description: "Q-switched and picosecond laser tattoo removal for safe, effective ink elimination.",
 };
 
 export default function TattooRemovalPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Tattoo Removal</h1>
-            <p className="text-lg text-gray-600 mb-8">Safe and effective laser tattoo removal with advanced Q-switched and picosecond technology</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">How Tattoo Removal Works</h2>
-              <p className="text-gray-600 mb-4">Laser tattoo removal uses high-intensity light pulses to break down ink particles in the skin. Our advanced Q-switched and picosecond lasers deliver ultra-short pulses that shatter ink into tiny fragments, which your body naturally eliminates over time.</p>
-              <p className="text-gray-600">The treatment is safe for all skin types and can effectively remove both professional and amateur tattoos of various colors and sizes.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "All Colors", desc: "Removes black, colored, and stubborn inks", icon: "🎨"}, {title: "Safe", desc: "Minimal risk of scarring or damage", icon: "🛡️"}, {title: "Effective", desc: "Progressive fading with each session", icon: "✨"}, {title: "Customizable", desc: "Tailored to tattoo size and ink type", icon: "🎯"}, {title: "Comfortable", desc: "Numbing options available", icon: "🧊"}, {title: "Proven Results", desc: "Advanced laser technology", icon: "🔬"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Assessment", desc: "Tattoo evaluation and planning"}, {step: "02", title: "Prep", desc: "Numbing cream application"}, {step: "03", title: "Laser", desc: "Laser pulses break down ink"}, {step: "04", title: "Series", desc: "Multiple sessions for complete removal"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Remove Unwanted Tattoos</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your tattoo removal consultation today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Tattoo Removal"
+      description="Premium laser tattoo removal protocols designed for progressive fading, skin safety, and minimal scarring risk—planned around ink type, depth, and skin tone."
+      heroImage={heroImage}
+      understanding={{
+        title: "How Tattoo Removal Works",
+        description:
+          "Laser tattoo removal uses targeted light pulses to break tattoo ink into smaller fragments, which your body gradually clears over time. Different inks (black vs colored) and different depths respond differently, so treatment planning and spacing between sessions is essential.\n\nWe use safe protocols and aftercare planning to reduce the risk of irritation and support better fading.",
+        image:
+          "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="What Impacts Results"
+      causes={[
+        { title: "Ink colors and pigment type" },
+        { title: "Tattoo depth and density" },
+        { title: "Tattoo age (older often fades easier)" },
+        { title: "Skin tone and sensitivity" },
+        { title: "Location on the body" },
+        { title: "Aftercare and sun exposure" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Laser Session Series",
+          description: "Progressive fading across multiple sessions.",
+        },
+        {
+          title: "Color-Specific Planning",
+          description: "Different settings based on ink color response.",
+        },
+        {
+          title: "Numbing Support",
+          description: "Comfort measures to reduce discomfort.",
+        },
+        {
+          title: "Aftercare Protocol",
+          description: "Guidance to reduce irritation and risk.",
+        },
+        {
+          title: "Partial Fade for Cover-up",
+          description: "Planning to lighten ink for a new tattoo.",
+        },
+        {
+          title: "Scar Risk Assessment",
+          description: "We plan to minimize scarring risk.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Progressive fading" },
+        { title: "Works on many tattoo types" },
+        { title: "Non-surgical approach" },
+        { title: "Precision targeting" },
+        { title: "Planned for safety" },
+        { title: "Support for cover-ups" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Assessment",
+          description: "We evaluate color, depth, and skin type.",
+        },
+        {
+          title: "Preparation",
+          description: "Cleansing and numbing options.",
+        },
+        {
+          title: "Laser Session",
+          description: "Controlled pulses delivered to break ink safely.",
+        },
+        {
+          title: "Aftercare",
+          description: "Soothing care guidance and sun protection.",
+        },
+        {
+          title: "Series Planning",
+          description: "Sessions spaced to allow clearing and healing.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Skin-safety focus",
+          description: "We prioritize safe settings and aftercare.",
+        },
+        {
+          title: "Personalized protocols",
+          description: "Settings selected based on tattoo and skin.",
+        },
+        {
+          title: "Premium hygiene",
+          description: "Clean clinical standards.",
+        },
+        {
+          title: "Realistic guidance",
+          description: "Clear expectations about sessions and outcomes.",
+        },
+        {
+          title: "Aftercare support",
+          description: "Guidance to reduce irritation and protect results.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "How many sessions are required?",
+          answer:
+            "It depends on ink color, depth, and size. Many tattoos need multiple sessions.",
+        },
+        {
+          question: "Will it scar?",
+          answer:
+            "When planned correctly and followed with aftercare, scarring risk is minimized, but individual response varies.",
+        },
+        {
+          question: "Is it painful?",
+          answer:
+            "Discomfort varies. Numbing options can help.",
+        },
+        {
+          question: "Can all colors be removed?",
+          answer:
+            "Many colors can be treated, but response varies. We guide expectations during consultation.",
+        },
+        {
+          question: "Can I remove a tattoo for a cover-up?",
+          answer:
+            "Yes, partial fading is a common goal before cover-up tattoos.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

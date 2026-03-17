@@ -1,88 +1,159 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Acne Treatment | Healthfusion Multispeciality Clinic",
   description: "Effective acne treatment solutions at Healthfusion Multispeciality Clinic. Our dermatologists provide personalized acne care with advanced technology.",
 };
 
 export default function AcneTreatmentPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">
-              Acne Treatment
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Comprehensive acne solutions for clear, healthy skin. Our dermatologists 
-              use advanced treatments to target acne at its source.
-            </p>
-            <button className="px-8 py-4 bg-[#00A651] text-white rounded-full font-semibold hover:bg-[#0077C8] transition-all duration-300">
-              Book Consultation
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">
-                Understanding Acne
-              </h2>
-              <p className="text-gray-600 mb-4">
-                Acne is a common skin condition that occurs when hair follicles become 
-                clogged with oil and dead skin cells. It affects people of all ages 
-                and can cause emotional distress and skin scarring.
-              </p>
-              <p className="text-gray-600">
-                At Healthfusion, we offer personalized treatment plans that address 
-                the root cause of your acne, not just the symptoms.
-              </p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Options */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Our Treatment Options
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Topical Treatments",
-                description: "Prescription creams and gels to reduce inflammation and prevent new breakouts.",
-              },
-              {
-                title: "Oral Medications",
-                description: "Antibiotics and other oral medications for moderate to severe acne.",
-              },
-              {
-                title: "Advanced Procedures",
-                description: "Chemical peels, laser therapy, and other advanced treatments for stubborn acne.",
-              },
-            ].map((item, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Acne Treatment"
+      description="Advanced dermatologist-approved solutions for acne control, oil balance, and clearer skin—personalized to your skin type and lifestyle."
+      heroImage={heroImage}
+      understanding={{
+        // title: "Understanding Acne",
+        description:
+          "Acne is a common inflammatory skin condition caused by clogged pores, excess oil production, bacteria, and irritation. It may present as whiteheads, blackheads, pimples, or cystic acne.\n\nAt Healthfusion, we treat acne with a medically guided plan that targets the root cause—helping reduce active breakouts and improving overall skin texture.",
+        image:
+          "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Causes of Acne"
+      causes={[
+        { title: "Hormonal imbalance" },
+        { title: "Excess oil (sebum) production" },
+        { title: "Clogged pores" },
+        { title: "Bacterial growth" },
+        { title: "Stress & lifestyle" },
+        { title: "Diet triggers" },
+      ]}
+      optionsTitle="Acne Treatment Options"
+      options={[
+        {
+          title: "Chemical Peels",
+          description: "Gentle exfoliation to unclog pores and reduce acne marks.",
+        },
+        {
+          title: "Medicated Facials",
+          description: "Professional acne-focused facials for oil control and calming inflammation.",
+        },
+        {
+          title: "Laser / Light Therapy",
+          description: "Targets bacteria and reduces active inflammation safely.",
+        },
+        {
+          title: "Dermatologist Medications",
+          description: "Topical/oral medicines tailored to acne type and severity.",
+        },
+        {
+          title: "Acne Scar Support",
+          description: "Plans that include scar-reduction solutions when appropriate.",
+        },
+        {
+          title: "Skin Barrier Repair",
+          description: "Improves sensitivity and prevents recurring irritation-driven breakouts.",
+        },
+      ]}
+      benefitsTitle="Benefits of Acne Treatment"
+      benefits={[
+        { title: "Clearer skin with fewer breakouts" },
+        { title: "Reduced inflammation and redness" },
+        { title: "Improved texture and smoother pores" },
+        { title: "Lower risk of future scarring" },
+        { title: "Balanced oil production" },
+        { title: "Boosted confidence" },
+      ]}
+      procedureTitle="How the Treatment Works"
+      procedureSteps={[
+        {
+          title: "Dermatologist Consultation",
+          description: "We assess acne type, triggers, and past treatments.",
+        },
+        {
+          title: "Skin Analysis",
+          description: "We evaluate oil levels, sensitivity, and inflammation.",
+        },
+        {
+          title: "Personalized Plan",
+          description: "A combination of procedures + homecare is recommended.",
+        },
+        {
+          title: "Treatment Sessions",
+          description: "Peels/facials/laser are scheduled based on your skin response.",
+        },
+        {
+          title: "Follow-up & Maintenance",
+          description: "We fine-tune the plan to keep acne controlled long-term.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Experienced dermatologists",
+          description: "Evidence-based acne protocols with careful monitoring.",
+        },
+        {
+          title: "Advanced technology",
+          description: "Modern devices and safe procedures for sensitive skin.",
+        },
+        {
+          title: "Personalized plans",
+          description: "Your acne plan is tailored—not one-size-fits-all.",
+        },
+        {
+          title: "Hygienic & safe",
+          description: "Clinic-grade safety standards and sterilized equipment.",
+        },
+        {
+          title: "Long-term results focus",
+          description: "We address triggers and barrier health to reduce recurrence.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is acne treatment painful?",
+          answer:
+            "Most treatments are comfortable. Some procedures may cause mild tingling or temporary redness, which settles quickly.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "It depends on acne type and severity. Many patients notice improvement within a few weeks; your doctor will outline a session plan after evaluation.",
+        },
+        {
+          question: "Is laser acne treatment safe?",
+          answer:
+            "Yes, when performed under dermatologist guidance with the right settings for your skin type.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "You may see early improvement within 2–4 weeks, with more visible results over subsequent sessions and consistent home care.",
+        },
+        {
+          question: "Can acne come back after treatment?",
+          answer:
+            "Acne can recur due to hormones, stress, or skincare changes. We provide a maintenance plan to minimize recurrence.",
+        },
+        {
+          question: "Can you also treat acne marks/scars?",
+          answer:
+            "Yes. Once active acne is controlled, we can plan scar-reduction options based on your skin’s needs.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

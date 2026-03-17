@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function DoctorsSection() {
   const doctors = [
@@ -30,7 +31,7 @@ export default function DoctorsSection() {
       name: "Dr. Vikram Singh",
       specialization: "Laser Specialist",
       experience: "14 years",
-      image: "/doctor4.jpg",
+      image: "/doctor.jpg",
       rating: 4.8,
     },
   ];
@@ -85,9 +86,12 @@ export default function DoctorsSection() {
                 <p className="text-gray-500 text-sm mb-4">
                   {doctor.experience} experience
                 </p>
-                <button className="w-full py-3 bg-[#0B0F19] text-white rounded-full font-semibold hover:bg-[#00A651] transition-colors">
+                <Link
+                  href="/appointment"
+                  className="w-full py-3 bg-[#0B0F19] text-white rounded-full font-semibold hover:bg-[#0077C8] transition-colors inline-flex items-center justify-center"
+                >
                   Book Appointment
-                </button>
+                </Link>
               </div>
             </div>
           ))}

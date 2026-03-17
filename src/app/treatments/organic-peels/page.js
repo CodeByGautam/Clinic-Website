@@ -1,177 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Organic Peels Treatment | Healthfusion Multispeciality Clinic",
   description: "Natural, chemical-free organic peels for gentle skin rejuvenation and renewal at Healthfusion Clinic.",
 };
 
 export default function OrganicPeelsPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">
-              Organic Peels
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Natural, chemical-free exfoliation using organic ingredients for gentle skin renewal
-            </p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">
-              Book Consultation
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Overview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">
-                What are Organic Peels?
-              </h2>
-              <p className="text-gray-600 mb-4">
-                Organic peels are natural exfoliation treatments that use fruit enzymes, plant extracts, and natural acids to remove dead skin cells and reveal fresh, radiant skin underneath. Unlike chemical peels, organic peels are gentle and free from harsh synthetic chemicals.
-              </p>
-              <p className="text-gray-600">
-                These peels harness the power of nature using ingredients like papaya, pineapple, pumpkin, and various botanical extracts to gently dissolve dead skin cells, promote cell turnover, and improve overall skin texture and tone.
-              </p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Benefits of Organic Peels
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "100% Natural",
-                description: "Free from synthetic chemicals and harsh ingredients",
-                icon: "🌿"
-              },
-              {
-                title: "Gentle Exfoliation",
-                description: "Removes dead skin cells without irritation or redness",
-                icon: "🍃"
-              },
-              {
-                title: "Brightens Skin",
-                description: "Reveals a brighter, more radiant complexion",
-                icon: "✨"
-              },
-              {
-                title: "Unclogs Pores",
-                description: "Deep cleanses and minimizes pore appearance",
-                icon: "🧽"
-              },
-              {
-                title: "Anti-Ageing",
-                description: "Reduces fine lines and promotes youthful skin",
-                icon: "🌸"
-              },
-              {
-                title: "Safe for All",
-                description: "Suitable for sensitive and all skin types",
-                icon: "🛡️"
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Procedure Steps */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Treatment Steps
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Consultation", desc: "Skin analysis to select the right organic peel" },
-              { step: "02", title: "Cleansing", desc: "Deep cleanse to prepare skin for treatment" },
-              { step: "03", title: "Peel Application", desc: "Application of organic peel solution" },
-              { step: "04", title: "Nourishment", desc: "Hydration with natural serums" }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs Section */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: "What ingredients are used in organic peels?",
-                a: "We use natural ingredients like papaya enzymes, pineapple extracts, pumpkin enzymes, lactic acid from milk, and various botanical extracts."
-              },
-              {
-                q: "Is there any downtime after organic peel?",
-                a: "No, organic peels typically have no downtime. You may experience slight tingling during treatment but can resume normal activities immediately."
-              },
-              {
-                q: "How often should I get an organic peel?",
-                a: "We recommend getting organic peels every 2-4 weeks for optimal results and maintenance."
-              },
-              {
-                q: "Can pregnant women get organic peels?",
-                a: "Yes, organic peels are generally safe for pregnant women as they are chemical-free and use natural ingredients."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-[#0B0F19] mb-2">{faq.q}</h3>
-                <p className="text-gray-600">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Experience Natural Skin Renewal
-          </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Book your Organic Peel treatment and discover the power of natural skincare
-          </p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
-            Book Your Appointment
-          </button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Organic Peels"
+      description="A gentle, premium exfoliation experience designed to improve texture and glow while supporting the skin barrier—ideal for sensitive or first-time peel patients."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Organic Peels",
+        description:
+          "Organic peels use fruit enzymes and botanical extracts to exfoliate dead skin cells and improve skin clarity. Compared to stronger chemical peels, organic peels are typically gentler and can be a good option for those looking for mild rejuvenation with comfort-focused care.\n\nYour dermatologist will recommend the best peel strength and schedule based on your skin type, sensitivity, and goals.",
+        image:
+          "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns It Helps"
+      causes={[
+        { title: "Dull skin" },
+        { title: "Rough texture" },
+        { title: "Mild pigmentation" },
+        { title: "Congested pores" },
+        { title: "Uneven tone" },
+        { title: "Early fine lines (texture support)" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Enzyme-Based Exfoliation",
+          description: "Papaya/pineapple-style enzymes to smooth and brighten.",
+        },
+        {
+          title: "Botanical Soothing Protocols",
+          description: "Barrier-support steps to reduce redness and sensitivity.",
+        },
+        {
+          title: "Glow + Hydration Boost",
+          description: "Hydrating add-ons for plumpness and radiance.",
+        },
+        {
+          title: "Pore-Clarifying Plan",
+          description: "For congestion and blackheads with gentle guidance.",
+        },
+        {
+          title: "Maintenance Schedule",
+          description: "A safe plan to maintain results without over-exfoliation.",
+        },
+        {
+          title: "Homecare Routine",
+          description: "Skin-barrier friendly routine to support long-term clarity.",
+        },
+      ]}
+      benefitsTitle="Benefits of Organic Peels"
+      benefits={[
+        { title: "Gentle exfoliation and renewed glow" },
+        { title: "Smoother texture" },
+        { title: "Clearer-looking pores" },
+        { title: "Brighter, healthier appearance" },
+        { title: "Comfort-focused protocols" },
+        { title: "Suitable for many skin types" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "Skin evaluation and selection of peel strength.",
+        },
+        {
+          title: "Preparation",
+          description: "Cleansing and gentle prep for even application.",
+        },
+        {
+          title: "Peel Application",
+          description: "Controlled exfoliation with comfort monitoring.",
+        },
+        {
+          title: "Neutralize & Soothe",
+          description: "Soothing steps to support the skin barrier.",
+        },
+        {
+          title: "Aftercare",
+          description: "Moisture + sunscreen advice to protect results.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Dermatologist guidance",
+          description: "Safe peel selection based on your skin needs.",
+        },
+        {
+          title: "Barrier-first approach",
+          description: "Comfortable protocols that reduce over-exfoliation.",
+        },
+        {
+          title: "Premium hygiene",
+          description: "Clean clinical environment and safe practices.",
+        },
+        {
+          title: "Custom schedules",
+          description: "Treatment plans designed around your sensitivity and goals.",
+        },
+        {
+          title: "Aftercare support",
+          description: "Guidance to maintain glow and reduce irritation.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is there downtime after an organic peel?",
+          answer:
+            "Most patients have minimal downtime. Mild redness or dryness can occur depending on skin sensitivity.",
+        },
+        {
+          question: "How often can I do organic peels?",
+          answer:
+            "Many plans recommend sessions every 2–4 weeks, but frequency is personalized.",
+        },
+        {
+          question: "Will my skin peel visibly?",
+          answer:
+            "Organic peels are typically gentle; visible peeling is usually mild or absent, depending on peel type.",
+        },
+        {
+          question: "Are organic peels safe for sensitive skin?",
+          answer:
+            "They can be, when selected and applied appropriately. We tailor protocols to sensitivity.",
+        },
+        {
+          question: "Do I need sunscreen after a peel?",
+          answer:
+            "Yes—sunscreen is essential after exfoliation to protect your skin and results.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

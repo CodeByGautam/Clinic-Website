@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Face Fat Reduction | Healthfusion Multispeciality Clinic",
   description: "Non-surgical face fat reduction treatments including fat-dissolving injections and RF technology.",
 };
 
 export default function FaceFatReductionPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Face Fat Reduction</h1>
-            <p className="text-lg text-gray-600 mb-8">Non-surgical treatments to reduce facial fat and contour your face</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is Face Fat Reduction?</h2>
-              <p className="text-gray-600 mb-4">Face fat reduction treatments target stubborn fat deposits in areas like the double chin, cheeks, and jawline. Using advanced non-surgical techniques, we help sculpt and define your facial contours without invasive surgery.</p>
-              <p className="text-gray-600">Our treatments include fat-dissolving injections and radiofrequency technology that break down fat cells naturally, giving you a slimmer, more defined facial appearance.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Double Chin", desc: "Eliminate stubborn under-chin fat", icon: "👤"}, {title: "Jawline Definition", desc: "Create a sharper, contoured jawline", icon: "📐"}, {title: "Cheek Slimming", desc: "Reduce excess cheek volume", icon: "🦋"}, {title: "Non-Surgical", desc: "No surgery or general anesthesia", icon: "🩹"}, {title: "Quick Results", desc: "Visible improvement in weeks", icon: "⚡"}, {title: "Long-Lasting", desc: "Permanent fat cell reduction", icon: "⏳"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Consultation", desc: "Assess areas and plan treatment"}, {step: "02", title: "Preparation", desc: "Numbing and marking target areas"}, {step: "03", title: "Treatment", desc: "Injections or RF application"}, {step: "04", title: "Recovery", desc: "Minimal downtime, gradual results"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Sculpt Your Face</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your face fat reduction consultation today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Face Fat Reduction"
+      description="Non-surgical contouring solutions designed to reduce localized facial fat and improve definition—planned with a natural, balanced aesthetic approach."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Facial Fat & Contour",
+        description:
+          "Some people develop localized fullness in areas like the double chin, jawline, or lower face due to genetics, weight changes, or lifestyle factors. Modern non-surgical techniques can help improve contour and definition without invasive surgery.\n\nAt Healthfusion, we assess face shape, skin quality, and goals before recommending the most suitable approach.",
+        image:
+          "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Causes / Symptoms"
+      causes={[
+        { title: "Double chin / under-chin fullness" },
+        { title: "Genetic fat distribution" },
+        { title: "Weight fluctuations" },
+        { title: "Soft jawline definition" },
+        { title: "Lower-face heaviness" },
+        { title: "Skin laxity (needs assessment)" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Fat-Dissolving Injections (as advised)",
+          description: "Targets localized fat pockets with clinical planning.",
+        },
+        {
+          title: "RF / Energy-Based Contouring",
+          description: "Supports tightening and refined contour in suitable cases.",
+        },
+        {
+          title: "Combination Planning",
+          description: "May combine modalities depending on fat + skin quality.",
+        },
+        {
+          title: "Jawline Definition Support",
+          description: "Focus on facial balance and structure.",
+        },
+        {
+          title: "Lifestyle Guidance",
+          description: "Supports long-term maintenance and results.",
+        },
+        {
+          title: "Post-Treatment Aftercare",
+          description: "Comfort and swelling management guidance.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Improved jawline definition" },
+        { title: "Reduced appearance of double chin" },
+        { title: "Non-surgical approach" },
+        { title: "Minimal downtime in many cases" },
+        { title: "Natural-looking contour" },
+        { title: "Personalized planning" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We assess face shape, fat pockets, and skin quality.",
+        },
+        {
+          title: "Plan Selection",
+          description: "We select the best technique based on suitability.",
+        },
+        {
+          title: "Treatment Session",
+          description: "Procedure performed with comfort and safety protocols.",
+        },
+        {
+          title: "Aftercare",
+          description: "Guidance for swelling and skin support.",
+        },
+        {
+          title: "Follow-up",
+          description: "We track progress and plan additional sessions if needed.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Natural contour philosophy",
+          description: "Balanced, refined results—never overdone.",
+        },
+        {
+          title: "Expert assessment",
+          description: "We evaluate both fat and skin laxity.",
+        },
+        {
+          title: "Premium protocols",
+          description: "Clinical hygiene and safety-first practices.",
+        },
+        {
+          title: "Personalized sessions",
+          description: "Planned around your face shape and goals.",
+        },
+        {
+          title: "Aftercare support",
+          description: "Guidance to support comfort and outcomes.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is face fat reduction permanent?",
+          answer:
+            "Results can be long-lasting if weight remains stable. Your clinician will explain realistic expectations.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "This depends on the area and technique. Many plans involve multiple sessions.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Downtime is usually minimal, though swelling can occur depending on the approach.",
+        },
+        {
+          question: "Is it painful?",
+          answer:
+            "Comfort measures are used. Most patients experience mild discomfort rather than significant pain.",
+        },
+        {
+          question: "Can it help with a double chin?",
+          answer:
+            "Yes, many non-surgical plans target under-chin fullness effectively in suitable candidates.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

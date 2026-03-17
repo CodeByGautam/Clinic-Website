@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -21,11 +22,14 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#0077C8] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F7FAFC] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <Link
+              href="/appointment"
+              className="bg-white text-[#0077C8] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#F7FAFC] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center"
+            >
               Book Appointment
-            </button>
+            </Link>
             <a 
-              href="tel:+911234567890" 
+              href="tel:+919270216369" 
               className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

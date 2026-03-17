@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
                 key={index}
                 className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 group"
               >
-                <div className="w-14 h-14 rounded-xl bg-[#00A651]/10 text-[#00A651] flex items-center justify-center mb-4 group-hover:bg-[#00A651] group-hover:text-white transition-colors">
+                <div className="w-14 h-14 rounded-xl bg-[#00A651]/10 text-[#00A651] flex items-center justify-center mb-4 group-hover:bg-[#0077C8] group-hover:text-white transition-colors">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-bold text-[#0B0F19] mb-2">

@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Laser Hair Removal | Healthfusion Multispeciality Clinic",
   description: "Permanent laser hair reduction for smooth, hair-free skin using advanced diode and alexandrite lasers.",
 };
 
 export default function LaserHairRemovalPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Laser Hair Removal</h1>
-            <p className="text-lg text-gray-600 mb-8">Permanent hair reduction for smooth, silky skin</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is Laser Hair Removal?</h2>
-              <p className="text-gray-600 mb-4">Laser hair removal uses concentrated light beams to target and destroy hair follicles. The laser emits a specific wavelength that is absorbed by the melanin in hair, effectively disabling the follicle&apos;s ability to grow hair without damaging surrounding skin.</p>
-              <p className="text-gray-600">We use advanced diode and alexandrite lasers that are safe for all skin types and provide comfortable, effective treatments with lasting results.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Permanent Reduction", desc: "Long-lasting hair reduction after full course", icon: "✨"}, {title: "All Body Areas", desc: "Face, underarms, legs, bikini, back and more", icon: "🎯"}, {title: "Smooth Skin", desc: "No more razor bumps or ingrown hairs", icon: "🧴"}, {title: "Quick Sessions", desc: "Treatments take minutes to complete", icon: "⚡"}, {title: "Safe", desc: "FDA-approved for all skin types", icon: "🛡️"}, {title: "Cost-Effective", desc: "Save money on waxing and razors", icon: "💰"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Consultation", desc: "Skin and hair type assessment"}, {step: "02", title: "Prep", desc: "Shave and protect skin"}, {step: "03", title: "Treatment", desc: "Laser application to target area"}, {step: "04", title: "Series", desc: "6-8 sessions for optimal results"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Get Silky Smooth Skin</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your laser hair removal consultation today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Laser Hair Removal"
+      description="Advanced laser hair reduction for smoother, cleaner skin—performed with safe protocols and settings tailored to your skin and hair type."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Laser Hair Removal",
+        description:
+          "Laser hair removal uses focused light energy to target hair follicles and reduce future growth. The light is absorbed by pigment in the hair, helping disable the follicle while protecting surrounding skin.\n\nOur clinic uses dermatologist-guided parameters and modern devices to provide effective hair reduction with comfort-focused care.",
+        image:
+          "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="When Laser Hair Removal Helps"
+      causes={[
+        { title: "Unwanted facial or body hair" },
+        { title: "Ingrown hair" },
+        { title: "Razor bumps" },
+        { title: "Frequent waxing / shaving" },
+        { title: "Sensitive skin after hair removal" },
+        { title: "Dark, coarse hair concerns" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Underarms / Arms / Legs",
+          description: "Popular areas for long-term hair reduction with smooth finish.",
+        },
+        {
+          title: "Face & Neck",
+          description: "For upper lip, chin, jawline, and unwanted facial hair patterns.",
+        },
+        {
+          title: "Bikini / Back / Chest",
+          description: "Comfort-focused sessions for larger zones.",
+        },
+        {
+          title: "Skin Type-Specific Settings",
+          description: "Parameters adjusted to your tone and sensitivity.",
+        },
+        {
+          title: "Cooling & Comfort Measures",
+          description: "Steps to reduce heat sensation and redness.",
+        },
+        {
+          title: "Maintenance Planning",
+          description: "Follow-up sessions to support long-term reduction.",
+        },
+      ]}
+      benefitsTitle="Benefits of Laser Hair Removal"
+      benefits={[
+        { title: "Long-term hair reduction" },
+        { title: "Smoother skin texture" },
+        { title: "Fewer ingrown hairs" },
+        { title: "Reduced razor bumps" },
+        { title: "Time-saving routine" },
+        { title: "Hygienic and precise" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We review skin type, hair growth, and suitability.",
+        },
+        {
+          title: "Patch Test (if needed)",
+          description: "For sensitive skin and safety reassurance.",
+        },
+        {
+          title: "Session Preparation",
+          description: "Area is cleaned; guidance for shaving is provided.",
+        },
+        {
+          title: "Laser Session",
+          description: "Laser applied with appropriate settings and comfort measures.",
+        },
+        {
+          title: "Aftercare",
+          description: "Sun protection and soothing care to minimize irritation.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Dermatologist supervision",
+          description: "Appropriate settings for safety and results.",
+        },
+        {
+          title: "Advanced devices",
+          description: "Modern technology for efficient sessions.",
+        },
+        {
+          title: "Comfort-first approach",
+          description: "Cooling and supportive aftercare guidance.",
+        },
+        {
+          title: "Hygiene protocols",
+          description: "Clean, safe clinic procedures.",
+        },
+        {
+          title: "Clear session planning",
+          description: "We set expectations based on hair cycle and goals.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is laser hair removal painful?",
+          answer:
+            "Most patients describe it as mild warmth or a quick snap sensation. Comfort measures help reduce discomfort.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "Typically 6–8 sessions depending on area, hair thickness, and growth cycle. Your plan is personalized.",
+        },
+        {
+          question: "Is it safe for all skin types?",
+          answer:
+            "With correct device selection and settings, laser hair removal can be performed safely across many skin types.",
+        },
+        {
+          question: "Can I shave between sessions?",
+          answer:
+            "Yes. Shaving is usually allowed and recommended; waxing/threading may be restricted as it removes follicles.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Usually no. Mild redness can occur and settles quickly with aftercare.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

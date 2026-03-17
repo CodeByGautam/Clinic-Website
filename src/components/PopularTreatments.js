@@ -96,7 +96,7 @@ export default function PopularTreatments() {
 
                 {/* Arrow Button - Positioned at bottom center */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 z-10">
-                  <div className="w-10 h-10 rounded-full bg-[#0077C8] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:bg-[#00A651] group-hover:scale-110">
+                  <div className="w-10 h-10 rounded-full bg-[#0077C8] flex items-center justify-center shadow-lg transition-all duration-300 group-hover:bg-blue-700 group-hover:scale-110">
                     <svg 
                       className="w-5 h-5 text-white" 
                       fill="none" 
@@ -115,7 +115,7 @@ export default function PopularTreatments() {
               </div>
 
               {/* Treatment Title */}
-              <h3 className="text-lg font-semibold text-[#0B0F19] group-hover:text-[#00A651] transition-colors duration-300 mt-8">
+              <h3 className="text-lg font-semibold text-[#0B0F19] group-hover:text-[#0077C8] transition-colors duration-300 mt-8">
                 {treatment.title}
               </h3>
             </Link>

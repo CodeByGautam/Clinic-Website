@@ -1,78 +1,136 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Dermal Fillers | Healthfusion Multispeciality Clinic",
   description: "Premium dermal fillers for volume restoration, wrinkle reduction, and facial contouring at Healthfusion Clinic.",
 };
 
 export default function FillersPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1580281657527-47f249e8f7fd?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Dermal Fillers</h1>
-            <p className="text-lg text-gray-600 mb-8">Restore volume, smooth wrinkles, and enhance facial contours with premium dermal fillers</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What are Dermal Fillers?</h2>
-              <p className="text-gray-600 mb-4">Dermal fillers are injectable treatments that add volume, smooth lines, and enhance facial contours. Made from hyaluronic acid and other biocompatible substances, fillers provide immediate, natural-looking results.</p>
-              <p className="text-gray-600">Whether you want to plump lips, lift cheeks, smooth nasolabial folds, or contour your jawline, our expert injectors create personalized treatment plans for your aesthetic goals.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Areas</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Lips", desc: "Enhance volume and define shape", icon: "💋"}, {title: "Cheeks", desc: "Restore youthful volume and lift", icon: "🦴"}, {title: "Nasolabial Folds", desc: "Smooth smile lines", icon: "😊"}, {title: "Under Eyes", desc: "Reduce dark circles and hollows", icon: "👁️"}, {title: "Jawline", desc: "Define and contour", icon: "🎯"}, {title: "Chin", desc: "Enhance projection and balance", icon: "💎"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Consultation", desc: "Discuss goals and create treatment plan"}, {step: "02", title: "Preparation", desc: "Cleanse and apply numbing cream"}, {step: "03", title: "Injection", desc: "Precise filler placement by expert"}, {step: "04", title: "Results", desc: "Immediate visible improvement"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Enhance Your Natural Beauty</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your fillers consultation today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Dermal Fillers"
+      description="Premium, natural-looking volume restoration and contouring—planned by experts to enhance balance, smooth lines, and maintain a refined, authentic look."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Dermal Fillers",
+        description:
+          "Dermal fillers are injectable treatments designed to restore lost volume, soften lines, and enhance facial contours. Many fillers are hyaluronic acid-based—biocompatible and designed to integrate smoothly for natural-looking outcomes.\n\nOur approach focuses on facial harmony, subtle refinement, and safety-first technique—never an overfilled look.",
+        image:
+          "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns / Goals"
+      causes={[
+        { title: "Volume loss (cheeks/temples)" },
+        { title: "Smile lines (nasolabial folds)" },
+        { title: "Lip definition or volume" },
+        { title: "Under-eye hollowness" },
+        { title: "Jawline/chin definition" },
+        { title: "Facial contour refinement" },
+      ]}
+      optionsTitle="Treatment Areas"
+      options={[
+        { title: "Lips", description: "Refine shape, hydration, and natural volume." },
+        { title: "Cheeks", description: "Restore lift and youthful contour." },
+        { title: "Smile Lines", description: "Softens folds for a refreshed look." },
+        { title: "Under Eyes", description: "Improves hollowness and tired appearance." },
+        { title: "Jawline", description: "Defines contour and improves structure." },
+        { title: "Chin", description: "Enhances balance and facial profile." },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Immediate improvement" },
+        { title: "Natural-looking refinement" },
+        { title: "Restored facial balance" },
+        { title: "Softened wrinkles and folds" },
+        { title: "Minimal downtime" },
+        { title: "Customized to your face" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation & Mapping",
+          description: "We discuss goals and plan areas for balance.",
+        },
+        {
+          title: "Preparation",
+          description: "Cleansing and numbing for comfort.",
+        },
+        {
+          title: "Precise Placement",
+          description: "Expert injection technique with safe protocols.",
+        },
+        {
+          title: "Review",
+          description: "We assess symmetry and desired refinement.",
+        },
+        {
+          title: "Aftercare",
+          description: "Guidance to minimize swelling and support best results.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Natural aesthetic philosophy",
+          description: "Subtle enhancement, not overcorrection.",
+        },
+        {
+          title: "Expert technique",
+          description: "Precise mapping and safe placement.",
+        },
+        {
+          title: "Premium protocols",
+          description: "High standards for safety and hygiene.",
+        },
+        {
+          title: "Personalized planning",
+          description: "Based on face shape, proportions, and goals.",
+        },
+        {
+          title: "Aftercare support",
+          description: "Clear instructions and follow-up guidance.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Are dermal fillers safe?",
+          answer:
+            "Yes, when performed by trained professionals using appropriate products and techniques.",
+        },
+        {
+          question: "How long do fillers last?",
+          answer:
+            "Duration varies by product and area, commonly several months to over a year.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Most patients have minimal downtime. Mild swelling or bruising can occur.",
+        },
+        {
+          question: "Will I look unnatural?",
+          answer:
+            "Our goal is subtle, balanced enhancement. Treatment is planned to look like you—refreshed.",
+        },
+        {
+          question: "Does the procedure hurt?",
+          answer:
+            "Numbing is used for comfort. Most patients feel mild pressure rather than pain.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "PRP Hair Treatment | Healthfusion Multispeciality Clinic",
   description: "Platelet-Rich Plasma therapy for hair regrowth, strengthening, and stopping hair loss.",
 };
 
 export default function PRPtreatmentPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">PRP Hair Treatment</h1>
-            <p className="text-lg text-gray-600 mb-8">Stimulate natural hair regrowth using your body&apos;s own healing factors</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is PRP for Hair?</h2>
-              <p className="text-gray-600 mb-4">Platelet-Rich Plasma (PRP) therapy for hair uses your own blood&apos;s growth factors to stimulate dormant hair follicles and promote new hair growth. The concentrated platelets are injected into the scalp to boost circulation and cell regeneration.</p>
-              <p className="text-gray-600">This natural, FDA-approved treatment is effective for both men and women experiencing hair thinning, pattern baldness, and hair loss.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Hair Regrowth", desc: "Stimulates new hair follicles", icon: "🌱"}, {title: "Strengthens Hair", desc: "Thicker, stronger hair strands", icon: "💪"}, {title: "Stops Hair Loss", desc: "Prevents further hair fall", icon: "🛑"}, {title: "Natural Solution", desc: "Uses your own blood platelets", icon: "🌿"}, {title: "Safe", desc: "No surgery or chemicals", icon: "🛡️"}, {title: "Minimal Downtime", desc: "Resume normal life quickly", icon: "⚡"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Blood Draw", desc: "Small blood sample collected"}, {step: "02", title: "Processing", desc: "Platelets separated via centrifuge"}, {step: "03", title: "Injection", desc: "PRP injected into scalp areas"}, {step: "04", title: "Growth", desc: "Hair growth begins in 3-6 months"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Regrow Your Hair Naturally</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your PRP Hair Treatment today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="PRP Hair Treatment"
+      description="Regenerative hair therapy that uses your body’s own platelet-rich plasma to support follicle stimulation, reduce shedding, and improve hair strength—planned under clinical guidance."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding PRP for Hair",
+        description:
+          "Platelet-Rich Plasma (PRP) is prepared from a small sample of your blood, concentrating platelets that contain growth factors. PRP is injected into targeted scalp areas to support circulation and follicle stimulation.\n\nPRP is commonly used for hair thinning and early pattern hair loss, and it is often combined with medical therapy and scalp care for better outcomes.",
+        image:
+          "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns / Symptoms"
+      causes={[
+        { title: "Hair thinning" },
+        { title: "Early pattern hair loss" },
+        { title: "Increased shedding" },
+        { title: "Weak hair and breakage" },
+        { title: "Post-stress hair fall (support)" },
+        { title: "Poor scalp circulation" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "PRP Session Series",
+          description: "A planned series of sessions based on diagnosis and goals.",
+        },
+        {
+          title: "PRP + Medical Therapy",
+          description: "Combination approach for improved long-term results.",
+        },
+        {
+          title: "Scalp Health Optimization",
+          description: "Anti-dandruff/inflammation control where needed.",
+        },
+        {
+          title: "Nutritional Guidance",
+          description: "Support for deficiencies that worsen hair fall.",
+        },
+        {
+          title: "Maintenance Sessions",
+          description: "Periodic sessions to maintain progress.",
+        },
+        {
+          title: "Home Routine",
+          description: "Personalized scalp and hair-care routine.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Supports hair regrowth" },
+        { title: "Helps reduce shedding" },
+        { title: "Improves hair thickness over time" },
+        { title: "Uses your own plasma" },
+        { title: "Non-surgical option" },
+        { title: "Minimal downtime" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We assess pattern, triggers, and suitability.",
+        },
+        {
+          title: "Blood Draw",
+          description: "A small blood sample is collected.",
+        },
+        {
+          title: "PRP Preparation",
+          description: "Centrifugation concentrates platelet-rich plasma.",
+        },
+        {
+          title: "Scalp Injections",
+          description: "PRP delivered to targeted areas with safe protocols.",
+        },
+        {
+          title: "Follow-up",
+          description: "Session schedule and maintenance plan discussed.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Diagnosis-first planning",
+          description: "PRP is used when it fits your hair-loss pattern.",
+        },
+        {
+          title: "Safe protocols",
+          description: "Hygiene-first injections and aftercare.",
+        },
+        {
+          title: "Combination approach",
+          description: "Medical therapy + PRP for better outcomes.",
+        },
+        {
+          title: "Comfort-focused care",
+          description: "Supportive measures to minimize discomfort.",
+        },
+        {
+          title: "Long-term maintenance",
+          description: "Plans designed for sustainable results.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is PRP safe?",
+          answer:
+            "PRP uses your own blood components. Suitability is confirmed during consultation.",
+        },
+        {
+          question: "How many sessions are needed?",
+          answer:
+            "Many patients do a series of sessions. Your dermatologist will recommend the right plan.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Hair growth changes usually appear gradually over months.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Downtime is minimal. Mild scalp tenderness can occur for a short period.",
+        },
+        {
+          question: "Can PRP be combined with other treatments?",
+          answer:
+            "Yes, PRP is often combined with medical therapy and scalp care for better outcomes.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Hair Transformation Today",
+        description: "Book your consultation with our hair & scalp experts.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

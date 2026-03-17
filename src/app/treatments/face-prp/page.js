@@ -1,78 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Face PRP Treatment | Healthfusion Multispeciality Clinic",
   description: "Platelet-Rich Plasma therapy for facial rejuvenation, skin tightening, and natural glow at Healthfusion Clinic.",
 };
 
 export default function FacePRPPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">Face PRP</h1>
-            <p className="text-lg text-gray-600 mb-8">Harness your body&apos;s natural healing power for facial rejuvenation and radiant skin</p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">Book Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">What is Face PRP?</h2>
-              <p className="text-gray-600 mb-4">Platelet-Rich Plasma (PRP) therapy uses your own blood&apos;s healing factors to rejuvenate the skin. We extract platelets rich in growth factors and inject them into your face to stimulate collagen production and cell renewal.</p>
-              <p className="text-gray-600">This natural, non-surgical treatment improves skin texture, reduces fine lines, and gives you a healthy, youthful glow using your body&apos;s own regenerative abilities.</p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Benefits</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{title: "Natural Results", desc: "Uses your body&apos;s own healing factors", icon: "🌿"}, {title: "Collagen Boost", desc: "Stimulates natural collagen production", icon: "🧬"}, {title: "Skin Texture", desc: "Improves overall skin quality", icon: "✨"}, {title: "Fine Lines", desc: "Reduces wrinkles and fine lines", icon: "🌸"}, {title: "Under Eyes", desc: "Improves dark circles and hollows", icon: "👁️"}, {title: "Safe", desc: "No risk of allergic reactions", icon: "🛡️"}].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">Treatment Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[{step: "01", title: "Blood Draw", desc: "Small blood sample taken"}, {step: "02", title: "Processing", desc: "Centrifuge separates platelets"}, {step: "03", title: "Injection", desc: "PRP injected into target areas"}, {step: "04", title: "Healing", desc: "Natural rejuvenation begins"}].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">{item.step}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Rejuvenate Naturally</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">Book your Face PRP treatment today</p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">Book Your Appointment</button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Face PRP"
+      description="A natural, dermatologist-guided rejuvenation treatment that supports collagen and skin quality—using your body’s own growth factors for a refreshed, healthy glow."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Face PRP",
+        description:
+          "Platelet-Rich Plasma (PRP) therapy uses a small sample of your blood to concentrate platelets rich in growth factors. PRP is then applied or injected into targeted areas to support collagen stimulation and skin rejuvenation.\n\nIt’s commonly chosen for improving skin texture, early fine lines, dullness, and overall skin quality, with a natural approach.",
+        image:
+          "https://images.unsplash.com/photo-1580281657702-257584239a55?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns / Symptoms"
+      causes={[
+        { title: "Dullness and uneven texture" },
+        { title: "Early fine lines" },
+        { title: "Acne marks (support)" },
+        { title: "Tired-looking under-eyes" },
+        { title: "Loss of skin firmness" },
+        { title: "Dehydrated, stressed skin" },
+      ]}
+      optionsTitle="Treatment Options"
+      options={[
+        {
+          title: "Full Face Rejuvenation",
+          description: "Supports overall glow and improved skin quality.",
+        },
+        {
+          title: "Under-Eye Support",
+          description: "For tired appearance and hollowness support.",
+        },
+        {
+          title: "Texture Improvement",
+          description: "Can support smoother texture and refined pores.",
+        },
+        {
+          title: "PRP + Microneedling (as advised)",
+          description: "Combination approach for enhanced skin remodeling.",
+        },
+        {
+          title: "Maintenance Plans",
+          description: "Session planning for sustained results.",
+        },
+        {
+          title: "Homecare Guidance",
+          description: "Barrier repair and sun protection support.",
+        },
+      ]}
+      benefitsTitle="Benefits"
+      benefits={[
+        { title: "Natural approach using your own plasma" },
+        { title: "Improved glow and skin quality" },
+        { title: "Supports collagen stimulation" },
+        { title: "Texture and tone support" },
+        { title: "Minimal downtime for many patients" },
+        { title: "Personalized planning" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We assess goals and suitability.",
+        },
+        {
+          title: "Blood Draw",
+          description: "A small blood sample is collected.",
+        },
+        {
+          title: "PRP Preparation",
+          description: "Centrifuge separates platelet-rich plasma.",
+        },
+        {
+          title: "Application / Injection",
+          description: "PRP is used in targeted areas with safe protocols.",
+        },
+        {
+          title: "Aftercare",
+          description: "Soothing care and guidance for best recovery.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Dermatologist-guided planning",
+          description: "Customized approach based on your skin goals.",
+        },
+        {
+          title: "Safety-first protocols",
+          description: "Hygienic clinic standards and careful procedure steps.",
+        },
+        {
+          title: "Natural-looking results",
+          description: "Supports a refreshed look without overcorrection.",
+        },
+        {
+          title: "Premium aftercare",
+          description: "Guidance to support comfort and outcomes.",
+        },
+        {
+          title: "Combination planning",
+          description: "Options to combine with other treatments if advised.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "Is PRP safe?",
+          answer:
+            "PRP uses your own blood components, which generally reduces allergy risk. Suitability is confirmed during consultation.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "Many patients do a series of sessions. Your dermatologist will recommend a plan based on goals.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Glow may be noticed earlier, while collagen changes develop gradually over weeks.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "Mild redness or swelling can occur. Most patients return to routine quickly with aftercare.",
+        },
+        {
+          question: "Can PRP be combined with other treatments?",
+          answer:
+            "Yes. It can be paired with microneedling or other procedures when advised.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }

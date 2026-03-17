@@ -1,177 +1,154 @@
+import PremiumTreatmentPage from "@/components/PremiumTreatmentPage";
+
 export const metadata = {
   title: "Hydrafacial Treatment | Healthfusion Multispeciality Clinic",
   description: "Experience the ultimate Hydrafacial treatment at Healthfusion. Deep cleansing, exfoliation, and hydration for glowing, radiant skin.",
 };
 
 export default function HydrafacialPage() {
+  const heroImage =
+    "https://images.unsplash.com/photo-1612810436541-336ad4dc9a96?auto=format&fit=crop&w=2400&q=80";
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#00A651]/5 to-[#0077C8]/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#0B0F19] mb-6">
-              Hydrafacial Treatment
-            </h1>
-            <p className="text-lg text-gray-600 mb-8">
-              Deep cleanse, exfoliate, and hydrate your skin with our advanced Hydrafacial technology for an instant glow
-            </p>
-            <button className="px-8 py-4 bg-[#0077C8] text-white rounded-full font-semibold hover:bg-blue-700 transition-all duration-300">
-              Book Consultation
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Overview */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-[#0B0F19] mb-4">
-                What is Hydrafacial?
-              </h2>
-              <p className="text-gray-600 mb-4">
-                Hydrafacial is a revolutionary, non-invasive skin resurfacing treatment that combines cleansing, exfoliation, extraction, hydration, and antioxidant protection simultaneously. This multi-step treatment removes dead skin cells and impurities while delivering nourishing serums to the skin.
-              </p>
-              <p className="text-gray-600">
-                Suitable for all skin types, Hydrafacial delivers instant, noticeable results with no downtime or irritation. It is the perfect treatment for achieving that coveted healthy, glowing complexion.
-              </p>
-            </div>
-            <div className="bg-[#F7FAFC] rounded-2xl p-8 h-80 flex items-center justify-center">
-              <div className="text-center text-gray-400">
-                <svg className="w-20 h-20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <p>Treatment Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Key Benefits
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Deep Cleansing",
-                description: "Removes dirt, oil, and impurities from deep within pores",
-                icon: "🧼"
-              },
-              {
-                title: "Intense Hydration",
-                description: "Delivers nourishing serums for plump, hydrated skin",
-                icon: "💧"
-              },
-              {
-                title: "Instant Glow",
-                description: "Achieve radiant, glowing skin immediately after treatment",
-                icon: "✨"
-              },
-              {
-                title: "No Downtime",
-                description: "Resume normal activities immediately after the session",
-                icon: "⚡"
-              },
-              {
-                title: "Anti-Ageing",
-                description: "Reduces fine lines and improves skin texture",
-                icon: "🌟"
-              },
-              {
-                title: "All Skin Types",
-                description: "Safe and effective for every skin type and concern",
-                icon: "🛡️"
-              }
-            ].map((benefit, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-sm">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Procedure Steps */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Treatment Process
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Cleansing", desc: "Deep cleansing to remove surface impurities" },
-              { step: "02", title: "Exfoliation", desc: "Gentle exfoliation to remove dead skin cells" },
-              { step: "03", title: "Extraction", desc: "Painless suction to clear congested pores" },
-              { step: "04", title: "Hydration", desc: "Infusion of antioxidants and hyaluronic acid" }
-            ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[#00A651] text-white flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-semibold text-[#0B0F19] mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs Section */}
-      <section className="py-20 bg-[#F7FAFC]">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0B0F19] text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: "How long does a Hydrafacial treatment take?",
-                a: "A typical Hydrafacial session takes about 30-45 minutes, making it perfect for a lunch-break treatment."
-              },
-              {
-                q: "Is there any downtime after the treatment?",
-                a: "No, Hydrafacial has zero downtime. You can immediately apply makeup and resume normal activities."
-              },
-              {
-                q: "How often should I get a Hydrafacial?",
-                a: "For optimal results, we recommend monthly treatments to maintain healthy, glowing skin."
-              },
-              {
-                q: "Is Hydrafacial suitable for sensitive skin?",
-                a: "Yes, Hydrafacial is gentle and can be customized for all skin types, including sensitive skin."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-[#0B0F19] mb-2">{faq.q}</h3>
-                <p className="text-gray-600">{faq.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#00A651] to-[#0077C8]">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready for Glowing Skin?
-          </h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-            Book your Hydrafacial treatment today and experience the transformation
-          </p>
-          <button className="px-8 py-4 bg-white text-[#0077C8] rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg">
-            Book Your Appointment
-          </button>
-        </div>
-      </section>
-    </main>
+    <PremiumTreatmentPage
+      title="Hydrafacial Treatment"
+      description="A premium, no-downtime facial that cleanses, exfoliates, extracts, and deeply hydrates—leaving your skin instantly smoother and more radiant."
+      heroImage={heroImage}
+      understanding={{
+        title: "Understanding Hydrafacial",
+        description:
+          "Hydrafacial is a non-invasive skin resurfacing treatment that combines cleansing, exfoliation, gentle extraction, hydration, and antioxidant infusion in a single session. It improves skin clarity and glow without the downtime commonly associated with harsher procedures.\n\nIt’s ideal for congested pores, dullness, uneven tone, and dehydrated skin, and can be customized to your concerns.",
+        image:
+          "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=2400&q=80",
+      }}
+      causesTitle="Common Concerns It Targets"
+      causes={[
+        { title: "Dullness and dehydration" },
+        { title: "Congested pores" },
+        { title: "Blackheads / whiteheads" },
+        { title: "Uneven tone" },
+        { title: "Fine lines (hydration support)" },
+        { title: "Oily or combination skin" },
+      ]}
+      optionsTitle="Hydrafacial Options"
+      options={[
+        {
+          title: "Deep Cleansing + Exfoliation",
+          description: "Improves texture and removes surface build-up for clarity.",
+        },
+        {
+          title: "Gentle Extraction",
+          description: "Helps clear congestion and blackheads comfortably.",
+        },
+        {
+          title: "Hydration Infusion",
+          description: "Serums and hyaluronic hydration for plumpness and glow.",
+        },
+        {
+          title: "Glow Boost Add-ons",
+          description: "Customization for brightness, soothing, or oil control.",
+        },
+        {
+          title: "Pre-Event Radiance Session",
+          description: "A popular choice for instant glow before special occasions.",
+        },
+        {
+          title: "Maintenance Plan",
+          description: "Monthly sessions to maintain long-term skin health.",
+        },
+      ]}
+      benefitsTitle="Benefits of Hydrafacial"
+      benefits={[
+        { title: "Instant glow and smoother texture" },
+        { title: "Deeper hydration and plumpness" },
+        { title: "Cleaner-looking pores" },
+        { title: "Balanced oil and clarity" },
+        { title: "Comfortable, no downtime" },
+        { title: "Suitable for many skin types" },
+      ]}
+      procedureTitle="Treatment Procedure"
+      procedureSteps={[
+        {
+          title: "Consultation",
+          description: "We understand skin concerns and customize the session.",
+        },
+        {
+          title: "Cleanse & Exfoliate",
+          description: "Removes surface buildup and prepares skin.",
+        },
+        {
+          title: "Extract",
+          description: "Gentle suction-based extraction for congestion.",
+        },
+        {
+          title: "Hydrate & Infuse",
+          description: "Antioxidants and hydration are delivered into the skin.",
+        },
+        {
+          title: "Protect",
+          description: "Aftercare includes hydration and sun protection guidance.",
+        },
+      ]}
+      whyChooseTitle="Why Choose Healthfusion"
+      whyChoose={[
+        {
+          title: "Dermatologist-supervised care",
+          description: "Appropriate customization for your skin.",
+        },
+        {
+          title: "Premium hygiene standards",
+          description: "Safe and clean clinical environment.",
+        },
+        {
+          title: "Customized protocols",
+          description: "Focused on glow + barrier-friendly results.",
+        },
+        {
+          title: "Comfort-first sessions",
+          description: "Gentle process suitable for busy routines.",
+        },
+        {
+          title: "Long-term skin health",
+          description: "We guide homecare to maintain results.",
+        },
+      ]}
+      beforeAfter={{
+        beforeImage: "https://placehold.co/1400x900/png?text=Before",
+        afterImage: "https://placehold.co/1400x900/png?text=After",
+      }}
+      faqs={[
+        {
+          question: "How long does a Hydrafacial session take?",
+          answer:
+            "Most sessions take about 30–45 minutes, depending on customization.",
+        },
+        {
+          question: "Is there downtime?",
+          answer:
+            "No—most people resume normal activities immediately.",
+        },
+        {
+          question: "How often should I do it?",
+          answer:
+            "Many patients choose monthly sessions for maintenance; frequency depends on goals and skin type.",
+        },
+        {
+          question: "Is it suitable for sensitive skin?",
+          answer:
+            "Hydrafacial can be customized for sensitive skin with gentle settings and soothing options.",
+        },
+        {
+          question: "Can I do it before an event?",
+          answer:
+            "Yes—Hydrafacial is popular as a pre-event glow treatment due to instant radiance.",
+        },
+      ]}
+      cta={{
+        title: "Start Your Skin Transformation Today",
+        description: "Book your consultation with our expert dermatologists.",
+        primary: { label: "Book Appointment", href: "/appointment" },
+        secondary: { label: "Call Now", href: "tel:+919270216369" },
+      }}
+    />
   );
 }
