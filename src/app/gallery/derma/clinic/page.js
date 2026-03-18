@@ -9,37 +9,37 @@ export const metadata = {
 export default function DermatologyClinicPage() {
   const galleryImages = [
     {
-      src: "/images/derma/clinic/reception.jpg",
+      src: "/clinic/clinic55.jpeg",
       title: "Clinic Reception",
       caption: "Modern welcoming area",
       description: "Our contemporary reception area designed for patient comfort with modern aesthetics and efficient check-in facilities."
     },
     {
-      src: "/images/derma/clinic/waiting-lounge.jpg",
+      src: "/clinic/clinic56.jpeg",
       title: "Patient Lounge",
       caption: "Comfortable waiting area",
       description: "Spacious and comfortable waiting lounge with modern amenities for a relaxing pre-treatment experience."
     },
     {
-      src: "/images/derma/clinic/consultation-suite.jpg",
+      src: "/clinic/clinic58.jpeg",
       title: "Consultation Suite",
       caption: "Private examination rooms",
       description: "Modern consultation suites equipped with advanced diagnostic tools for comprehensive skin analysis."
     },
     {
-      src: "/images/derma/clinic/sterilization-area.jpg",
+      src: "/clinic/clinic6.jpeg",
       title: "Sterilization Area",
       caption: "Medical-grade hygiene standards",
       description: "Dedicated sterilization zone maintaining the highest medical hygiene standards for all equipment and tools."
     },
     {
-      src: "/images/derma/clinic/product-display.jpg",
+      src: "/clinic/clinic53.jpeg",
       title: "Skincare Product Center",
       caption: "Premium skincare products",
       description: "Curated selection of medical-grade skincare products and prescribed treatments available at our clinic."
     },
     {
-      src: "/images/derma/clinic/pharmacy.jpg",
+      src: "/clinic/clinic57.jpeg",
       title: "In-house Pharmacy",
       caption: "Convenient medication access",
       description: "Fully stocked pharmacy providing prescribed medications and post-treatment care products for patient convenience."

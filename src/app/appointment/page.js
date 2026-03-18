@@ -52,7 +52,8 @@ export default function AppointmentPage() {
             <div className="rounded-3xl border border-black/5 bg-white/70 backdrop-blur shadow-[0_18px_60px_-30px_rgba(0,0,0,0.35)] overflow-hidden">
               <div className="relative h-56 sm:h-72">
                 <Image
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2400&q=80"
+                  // src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=2400&q=80"
+                  src="/clinic/clinic55.jpeg"
                   alt="Premium clinic experience"
                   fill
                   className="object-cover"

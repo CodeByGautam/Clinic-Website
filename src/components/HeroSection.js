@@ -9,7 +9,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/dr.home-page.jpeg"
+          src="/hero1.jpg"
           alt="Advanced Skin and Hair Treatment Clinic"
           fill
           priority
@@ -67,7 +67,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-white/20">
+            {/* <div className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-white/20">
               <div className="flex items-center gap-2">
                 <div className="flex -space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -80,17 +80,17 @@ export default function HeroSection() {
                     </svg>
                   ))}
                 </div>
-                <span className="text-white/80 text-sm">4.9/5 Rating</span>
+                <span className="text-black text-sm">4.9/5 Rating</span>
               </div>
               <div className="h-4 w-px bg-white/30" />
-              <div className="text-white/80 text-sm">
-                <span className="text-white font-semibold">100k+</span> Happy Patients
+              <div className="text-black text-sm">
+                <span className="text-black font-semibold">100k+</span> Happy Patients
               </div>
               <div className="h-4 w-px bg-white/30" />
-              <div className="text-white/80 text-sm">
-                <span className="text-white font-semibold">15+</span> Years Experience
+              <div className="text-black text-sm">
+                <span className="text-black font-semibold">15+</span> Years Experience
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
