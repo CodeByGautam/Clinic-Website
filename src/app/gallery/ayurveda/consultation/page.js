@@ -26,24 +26,24 @@ export default function AyurvedaConsultationPage() {
       caption: "One-on-one consultation",
       description: "Personalized consultation session where our experienced Ayurvedic doctors discuss health concerns and treatment options."
     },
-    {
-      src: "/images/ayurveda/consultation/tongue-diagnosis.jpg",
-      title: "Tongue Examination",
-      caption: "Jihva Pariksha",
-      description: "Traditional tongue diagnosis to assess digestive health and identify doshic imbalances in the body."
-    },
-    {
-      src: "/images/ayurveda/consultation/treatment-planning.jpg",
-      title: "Treatment Planning",
-      caption: "Personalized protocol design",
-      description: "Doctors creating customized treatment plans based on comprehensive diagnosis and individual health goals."
-    },
-    {
-      src: "/images/ayurveda/consultation/follow-up.jpg",
-      title: "Follow-up Session",
-      caption: "Progress monitoring",
-      description: "Regular follow-up consultations to monitor treatment progress and make necessary adjustments to the therapy protocol."
-    }
+    // {
+    //   src: "/images/ayurveda/consultation/tongue-diagnosis.jpg",
+    //   title: "Tongue Examination",
+    //   caption: "Jihva Pariksha",
+    //   description: "Traditional tongue diagnosis to assess digestive health and identify doshic imbalances in the body."
+    // },
+    // {
+    //   src: "/images/ayurveda/consultation/treatment-planning.jpg",
+    //   title: "Treatment Planning",
+    //   caption: "Personalized protocol design",
+    //   description: "Doctors creating customized treatment plans based on comprehensive diagnosis and individual health goals."
+    // },
+    // {
+    //   src: "/images/ayurveda/consultation/follow-up.jpg",
+    //   title: "Follow-up Session",
+    //   caption: "Progress monitoring",
+    //   description: "Regular follow-up consultations to monitor treatment progress and make necessary adjustments to the therapy protocol."
+    // }
   ];
 
   return (

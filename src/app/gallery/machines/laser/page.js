@@ -26,24 +26,24 @@ export default function LaserMachinesPage() {
       caption: "Tattoo & pigmentation laser",
       description: "High-powered Q-switched Nd:YAG laser for tattoo removal, pigmentation disorders, and carbon peel treatments."
     },
-    {
-      src: "/images/machines/laser/ipl-system.jpg",
-      title: "IPL System",
-      caption: "Intense Pulsed Light technology",
-      description: "Advanced IPL (Intense Pulsed Light) system for hair removal, skin rejuvenation, and vascular treatments."
-    },
-    {
-      src: "/images/machines/laser/erbium-laser.jpg",
-      title: "Erbium YAG Laser",
-      caption: "Gentle skin resurfacing",
-      description: "Erbium YAG laser for gentle skin resurfacing, mole removal, and precise ablative treatments with minimal downtime."
-    },
-    {
-      src: "/images/machines/laser/picolaser.jpg",
-      title: "PicoSure Laser",
-      caption: "Picosecond technology",
-      description: "Cutting-edge picosecond laser technology for faster tattoo removal, pigmentation treatment, and skin revitalization."
-    }
+    // {
+    //   src: "/images/machines/laser/ipl-system.jpg",
+    //   title: "IPL System",
+    //   caption: "Intense Pulsed Light technology",
+    //   description: "Advanced IPL (Intense Pulsed Light) system for hair removal, skin rejuvenation, and vascular treatments."
+    // },
+    // {
+    //   src: "/images/machines/laser/erbium-laser.jpg",
+    //   title: "Erbium YAG Laser",
+    //   caption: "Gentle skin resurfacing",
+    //   description: "Erbium YAG laser for gentle skin resurfacing, mole removal, and precise ablative treatments with minimal downtime."
+    // },
+    // {
+    //   src: "/images/machines/laser/picolaser.jpg",
+    //   title: "PicoSure Laser",
+    //   caption: "Picosecond technology",
+    //   description: "Cutting-edge picosecond laser technology for faster tattoo removal, pigmentation treatment, and skin revitalization."
+    // }
   ];
 
   return (

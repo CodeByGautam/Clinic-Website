@@ -28,7 +28,7 @@ export default function LaserTreatmentsPage() {
     },
     {
       src: "/Gallery/pigmentationlaser.jpeg",
-      title: "Pigmentation Laser",
+      title: "Carbon Laser Facial",
       caption: "Dark spot reduction therapy",
       description: "Advanced laser treatment for melasma, sun spots, and pigmentation disorders using targeted wavelength technology."
     },

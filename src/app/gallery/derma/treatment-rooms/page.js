@@ -20,30 +20,30 @@ export default function DermatologyTreatmentRoomsPage() {
       caption: "Premium facial therapy space",
       description: "Luxurious facial treatment suite designed for medi-facials, chemical peels, and advanced skin rejuvenation procedures."
     },
-    {
-      src: "/images/derma/treatment-rooms/injection-room.jpg",
-      title: "Injection Therapy Room",
-      caption: "Injectable treatments space",
-      description: "Specialized room for Botox, fillers, PRP, and other injectable treatments with medical-grade equipment and sterilization protocols."
-    },
-    {
-      src: "/images/derma/treatment-rooms/mnrf-room.jpg",
-      title: "MNRF Treatment Room",
-      caption: "Microneedling RF therapy",
-      description: "Dedicated MNRF (Microneedling Radiofrequency) room for advanced acne scar treatment, skin tightening, and rejuvenation."
-    },
+    // {
+    //   src: "/images/derma/treatment-rooms/injection-room.jpg",
+    //   title: "Injection Therapy Room",
+    //   caption: "Injectable treatments space",
+    //   description: "Specialized room for Botox, fillers, PRP, and other injectable treatments with medical-grade equipment and sterilization protocols."
+    // },
+    // {
+    //   src: "/images/derma/treatment-rooms/mnrf-room.jpg",
+    //   title: "MNRF Treatment Room",
+    //   caption: "Microneedling RF therapy",
+    //   description: "Dedicated MNRF (Microneedling Radiofrequency) room for advanced acne scar treatment, skin tightening, and rejuvenation."
+    // },
     {
       src: "/images/derma/treatment-rooms/hydrafacial-room.jpg",
       title: "Hydrafacial Suite",
       caption: "Advanced hydrafacial space",
       description: "Specialized Hydrafacial treatment room equipped with the latest vortex-fusion technology for deep cleansing and hydration."
     },
-    {
-      src: "/images/derma/treatment-rooms/led-room.jpg",
-      title: "LED Therapy Room",
-      caption: "Phototherapy treatment space",
-      description: "Advanced LED light therapy room for treating acne, reducing inflammation, and promoting skin healing with medical-grade equipment."
-    }
+    // {
+    //   src: "/images/derma/treatment-rooms/led-room.jpg",
+    //   title: "LED Therapy Room",
+    //   caption: "Phototherapy treatment space",
+    //   description: "Advanced LED light therapy room for treating acne, reducing inflammation, and promoting skin healing with medical-grade equipment."
+    // }
   ];
 
   return (

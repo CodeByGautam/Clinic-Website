@@ -20,24 +20,24 @@ export default function AyurvedaFacialPage() {
       caption: "Traditional cleansing therapy",
       description: "Authentic Ubtan treatment using gram flour, turmeric, and herbs for natural skin cleansing and brightening."
     },
-    {
-      src: "/images/ayurveda/facial/kumkumadi-facial.jpg",
-      title: "Kumkumadi Facial",
-      caption: "Saffron-based glow therapy",
-      description: "Luxurious Kumkumadi facial using saffron and precious herbs to enhance skin glow and reduce pigmentation."
-    },
-    {
-      src: "/images/ayurveda/facial/face-pack.jpg",
-      title: "Ayurvedic Face Pack",
-      caption: "Herbal mask application",
-      description: "Customized Ayurvedic face packs applied by trained therapists based on individual skin type and concerns."
-    },
-    {
-      src: "/images/ayurveda/facial/fruit-facial.jpg",
-      title: "Fruit Facial",
-      caption: "Natural fruit enzyme therapy",
-      description: "Refreshing fruit facial using natural fruit enzymes and Ayurvedic herbs for gentle exfoliation and nourishment."
-    },
+    // {
+    //   src: "/images/ayurveda/facial/kumkumadi-facial.jpg",
+    //   title: "Kumkumadi Facial",
+    //   caption: "Saffron-based glow therapy",
+    //   description: "Luxurious Kumkumadi facial using saffron and precious herbs to enhance skin glow and reduce pigmentation."
+    // },
+    // {
+    //   src: "/images/ayurveda/facial/face-pack.jpg",
+    //   title: "Ayurvedic Face Pack",
+    //   caption: "Herbal mask application",
+    //   description: "Customized Ayurvedic face packs applied by trained therapists based on individual skin type and concerns."
+    // },
+    // {
+    //   src: "/images/ayurveda/facial/fruit-facial.jpg",
+    //   title: "Fruit Facial",
+    //   caption: "Natural fruit enzyme therapy",
+    //   description: "Refreshing fruit facial using natural fruit enzymes and Ayurvedic herbs for gentle exfoliation and nourishment."
+    // },
     {
       src: "/gallery/anti-aging facial.jpeg",
       title: "Anti-Aging Treatment",
