@@ -5,21 +5,47 @@ import Image from "next/image";
 
 export default function Footer() {
   const quickLinks = [
-    { name: "About Us", href: "#" },
-    { name: "Our Doctors", href: "#clinics" },
-    { name: "Treatments", href: "#treatments" },
-    { name: "Results", href: "#" },
-    { name: "Blog", href: "#blog" },
+    { name: "About Us", href: "/about" },
+    { name: "Our Doctors", href: "/about/doctors" },
+    { name: "Treatments", href: "/treatments" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Contact", href: "#contact" },
   ];
 
-  const treatments = [
-    { name: "Acne Treatment", href: "#" },
-    { name: "Laser Hair Removal", href: "#" },
-    { name: "Hair Transplant", href: "#" },
-    { name: "PRP Treatment", href: "#" },
-    { name: "Pigmentation", href: "#" },
-    { name: "Anti Ageing", href: "#" },
+  const directionsUrl =
+    "https://www.google.com/maps/search/?api=1&query=Office%20No.%20-%2018B%2C%203rd%20floor%2C%20City%20Vista%2C%20A%20Wing%2C%20Kharadi%2C%20Pune%20-%20411014";
+
+  const embedUrl =
+    "https://www.google.com/maps?q=Office%20No.%20-%2018B%2C%203rd%20floor%2C%20City%20Vista%2C%20A%20Wing%2C%20Kharadi%2C%20Pune%20-%20411014&output=embed";
+
+  const contactInfo = [
+    {
+      type: "Phone",
+      value: "+91 92702 16369",
+      href: "tel:+919270216369",
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+      ),
+    },
+    {
+      type: "Email",
+      value: "healthfusion33@gmail.com",
+      href: "mailto:healthfusion33@gmail.com",
+      icon: (
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      ),
+    },
+    {
+      type: "Address",
+      value: "Office No. - 18B, 3rd floor, City Vista, A Wing, Kharadi, Pune - 411014",
+      href: directionsUrl,
+      icon: (
+        <>
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </>
+      ),
+    },
   ];
 
   return (
@@ -88,59 +114,57 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Treatments */}
+          {/* Contact Us */}
           <div>
-            <h3 className="font-bold text-lg mb-6">Treatments</h3>
-            <ul className="space-y-3">
-              {treatments.map((treatment) => (
-                <li key={treatment.name}>
-                  <Link href={treatment.href} className="text-gray-400 hover:text-[#0077C8] transition-colors">
-                    {treatment.name}
-                  </Link>
+            <h3 className="font-bold text-lg mb-6">Contact Us</h3>
+            <ul className="space-y-4">
+              {contactInfo.map((info) => (
+                <li key={info.type} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-[#00A651] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    {info.icon}
+                  </svg>
+                  <div>
+                    <p className="text-gray-400 text-sm">{info.type}</p>
+                    {info.href ? (
+                      <Link 
+                        href={info.href}
+                        className="text-white hover:text-[#0077C8] transition-colors text-sm"
+                        target={info.type === "Address" ? "_blank" : undefined}
+                        rel={info.type === "Address" ? "noopener noreferrer" : undefined}
+                      >
+                        {info.value}
+                      </Link>
+                    ) : (
+                      <p className="text-white text-sm">{info.value}</p>
+                    )}
+                  </div>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Our Location */}
           <div>
-            <h3 className="font-bold text-lg mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#00A651] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <div>
-                  <p className="text-gray-400">Phone</p>
-                  <a href="tel:+919270216369" className="text-white hover:text-[#0077C8] transition-colors">
-                    +91 92702 16369
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#00A651] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <div>
-                  <p className="text-gray-400">Email</p>
-                  <a href="mailto:healthfusion33@gmail.com" className="text-white hover:text-[#0077C8] transition-colors">
-                    healthfusion33@gmail.com
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-[#00A651] mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <div>
-                  <p className="text-gray-400">Address</p>
-                  <p className="text-white">
-                    Office No. - 18B, 3rd floor, City Vista, A Wing, Kharadi, Pune - 411014
-                  </p>
-                </div>
-              </li>
-            </ul>
+            <h3 className="font-bold text-lg mb-6">Our Location</h3>
+            <div className="rounded-lg overflow-hidden shadow-sm border border-white/10 bg-white/5">
+              <iframe
+                src={embedUrl}
+                className="w-full h-40 border-0"
+                loading="lazy"
+                title="Healthfusion Clinic Location"
+              />
+            </div>
+            <p className="mt-4 text-gray-400 text-sm leading-relaxed">
+              Office No. - 18B, 3rd floor, City Vista, A Wing, Kharadi, Pune - 411014
+            </p>
+            <a
+              href={directionsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center justify-center rounded-full bg-[#0077C8] text-white px-5 py-2.5 font-semibold shadow-md hover:bg-blue-700 transition-all duration-300"
+            >
+              Get Directions
+            </a>
           </div>
         </div>
 

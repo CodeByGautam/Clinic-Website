@@ -8,11 +8,21 @@ import DoctorsSection from "@/components/DoctorsSection";
 import Testimonials from "@/components/Testimonials";
 import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
+import DualTreatmentSection from "@/components/DualTreatmentSection";
+import VideoSection from "@/components/VideoSection";
+import { videos } from "@/data/videos";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
+      <DualTreatmentSection />
+      <VideoSection
+        title="See Our Multispeciality Clinic Interior"
+        subtitle="Real ambiance of our clinic"
+        videos={videos}
+        maxItems={4}
+      />
       <TrustSection />
       <PopularTreatments />
       <BeforeAfterSlider />

@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 import AppointmentModal from "@/components/AppointmentModal";
+import { treatments } from "@/data/treatments";
 import { 
   ChevronDown, 
   Calendar, 
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isAppointmentModalOpen, setIsAppointmentModalOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -128,9 +130,10 @@ export default function Navbar() {
       href: "#treatments" 
     },
     { 
-      name: "Conditions", 
-      hasDropdown: false, 
-      href: "#conditions" 
+      name: "Ayurveda", 
+      hasDropdown: true, 
+      dropdownType: "ayurveda",
+      href: "/ayurveda" 
     },
     { 
       name: "Gallery", 
@@ -284,6 +287,47 @@ export default function Navbar() {
                     </div>
                   )}
 
+                  {/* Ayurveda Dropdown */}
+                  {item.dropdownType === "ayurveda" && activeDropdown === item.name && (
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[360px] bg-white rounded-xl shadow-2xl p-6 border border-gray-100">
+                      <h4 className="font-bold text-[#0B0F19] mb-4 text-lg border-b border-gray-100 pb-2">
+                        Ayurveda Treatments
+                      </h4>
+                      <ul className="space-y-3">
+                        {treatments.ayurveda.map((treatment) => {
+                          const isActive = pathname === treatment.slug;
+
+                          return (
+                            <li key={treatment.name}>
+                              <Link
+                                href={treatment.slug}
+                                title={`View ${treatment.name}`}
+                                className={`transition-colors text-sm ${
+                                  isActive
+                                    ? "text-[#0077C8] font-semibold"
+                                    : "text-gray-600 hover:text-[#0077C8]"
+                                }`}
+                              >
+                                {treatment.name}
+                              </Link>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                      <div className="mt-6 pt-6 border-t border-gray-100 text-center">
+                        <Link
+                          href="/ayurveda"
+                          className="inline-flex items-center gap-2 bg-[#0077C8] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                        >
+                          View Ayurveda
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Gallery Mega Menu Dropdown */}
                   {item.dropdownType === "gallery" && activeDropdown === item.name && (
                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[800px] bg-white rounded-xl shadow-2xl p-8 border border-gray-100">
@@ -322,8 +366,6 @@ export default function Navbar() {
                       </div>
                     </div>
                   )}
-
-                  {/* Locations Dropdown */}
                 </div>
               ))}
             </div>
@@ -394,6 +436,57 @@ export default function Navbar() {
                     )}
                   </div>
 
+                  {/* Ayurveda with Submenu */}
+                  <div>
+                    <button
+                      onClick={() => setActiveDropdown(activeDropdown === "Ayurveda" ? null : "Ayurveda")}
+                      className="flex items-center justify-between w-full py-3 text-lg font-medium text-[#0B0F19] border-b border-gray-100"
+                    >
+                      Ayurveda
+                      <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === "Ayurveda" ? "rotate-180" : ""}`} />
+                    </button>
+                    {activeDropdown === "Ayurveda" && (
+                      <div className="pl-4 py-3 space-y-3">
+                        <div className="mb-4">
+                          <h4 className="font-semibold text-[#00A651] mb-2">Ayurveda Treatments</h4>
+                          <ul className="space-y-2">
+                            {treatments.ayurveda.map((treatment) => {
+                              const isActive = pathname === treatment.slug;
+
+                              return (
+                                <li key={treatment.name}>
+                                  <Link
+                                    href={treatment.slug}
+                                    title={`View ${treatment.name}`}
+                                    className={`transition-colors text-sm block py-1 ${
+                                      isActive
+                                        ? "text-[#0077C8] font-semibold"
+                                        : "text-gray-600 hover:text-[#0077C8]"
+                                    }`}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                  >
+                                    {treatment.name}
+                                  </Link>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        </div>
+
+                        <Link
+                          href="/ayurveda"
+                          className="inline-flex items-center gap-2 bg-[#0077C8] text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          View Ayurveda
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                          </svg>
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+
                   {/* Gallery with Submenu */}
                   <div>
                     <button
@@ -428,42 +521,22 @@ export default function Navbar() {
                   </div>
 
                   {/* Other Menu Items */}
-                  {mainMenuItems.filter(item => item.name !== "Treatments" && item.name !== "Gallery").map((item) => (
+                  {mainMenuItems
+                    .filter(
+                      (item) =>
+                        item.name !== "Treatments" &&
+                        item.name !== "Ayurveda" &&
+                        item.name !== "Gallery"
+                    )
+                    .map((item) => (
                     <div key={item.name}>
-                      {item.hasDropdown ? (
-                        <>
-                          <button
-                            onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                            className="flex items-center justify-between w-full py-3 text-lg font-medium text-[#0B0F19] border-b border-gray-100"
-                          >
-                            {item.name}
-                            <ChevronDown className={`w-5 h-5 transition-transform ${activeDropdown === item.name ? "rotate-180" : ""}`} />
-                          </button>
-                          {activeDropdown === item.name && (
-                            <div className="pl-4 py-3 space-y-2">
-                              {locations.map((location) => (
-                                <Link
-                                  key={location.name}
-                                  href={location.href}
-                                  className="flex items-center gap-3 text-[#0B0F19] hover:text-blue-700 transition-colors py-2"
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                  <MapPin className="w-4 h-4" />
-                                  {location.name}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </>
-                      ) : (
-                        <Link
-                          href={item.href}
-                          className="block py-3 text-lg font-medium text-[#0B0F19] border-b border-gray-100"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          {item.name}
-                        </Link>
-                      )}
+                      <Link
+                        href={item.href}
+                        className="block py-3 text-lg font-medium text-[#0B0F19] border-b border-gray-100"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
                     </div>
                   ))}
 
@@ -490,8 +563,8 @@ export default function Navbar() {
         className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#0077C8] text-white px-6 py-4 rounded-full font-semibold shadow-2xl hover:bg-blue-700 transition-all duration-300 hover:scale-105"
       >
         <Calendar className="w-5 h-5" />
-        <span className="hidden sm:inline">Book Free Consultation</span>
-        <span className="sm:hidden">Book Now</span>
+        <span className="hidden sm:inline">Book Appointment</span>
+        <span className="sm:hidden">Book</span>
       </button>
 
       <AppointmentModal open={isAppointmentModalOpen} onClose={closeAppointmentModal} />
